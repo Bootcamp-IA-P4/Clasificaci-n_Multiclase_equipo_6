@@ -16,7 +16,7 @@ def save_completa(data_dict):
         print("Error al guardar en Supabase:", e)
         return None
 
-def save_fill_complete(features: dict):
+def save_fill_complete(features: dict, predict):
     try:
         data_dict = {
             "age": features.get("age"),
@@ -30,6 +30,7 @@ def save_fill_complete(features: dict):
             "sit_and_bend_forward_cm": features.get("sit_and_bend_forward_cm"),
             "sit-ups_counts": features.get("sit-ups_counts"),
             "broad_jump_cm": features.get("broad_jump_cm"),
+            "class": predict,
         }
         #print("data_dict:", data_dict)
         save_completa(data_dict)
