@@ -5,6 +5,8 @@ from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.templating import Jinja2Templates
 from datetime import datetime
 from core.config import settings
+import core.lw_log as lw_log
+import github.data_github as github
 
 
 import pandas as pd
@@ -35,17 +37,22 @@ templates = Jinja2Templates(directory="templates")
 async def read_root(request: Request):
     creators_str = ", ".join(settings.creators)
     year  = datetime.now().year
+    load_logs = lw_log.read_file_logs()
+    github.get_repo_info()
+    github.get_repo_contributors()
+    lw_log.write_log(f"✅ Acceso a la página principal")
     # Cargar los datos de prueba desde el archivo CSV
     return templates.TemplateResponse(request,
         "index.html", 
         {
             "request": request, 
-            "title": settings.proyect_name + ", " + settings.version,
+            "title": settings.proyect_name + ", " + github.get_latest_github_tag(),
             "description": settings.description,
             "apipref": settings.api_prefix + settings.api_version,
             "creators": creators_str,
             "date": year,
             "body_performance": settings.datos_prueba,
+            "load_logs": load_logs,
         }
     )
 
@@ -53,22 +60,21 @@ async def read_root(request: Request):
 # Endpoint para la predicción multiple
 @app.post(settings.api_prefix+settings.api_version+"/predict")
 async def predict(
-    age: float = Form(...),
-    gender: str = Form(...),
-    height_cm: float = Form(...),
-    weight_kg: float = Form(...),
-    body_fat: float = Form(...),
-    diastolic: float = Form(...),
-    systolic: float = Form(...),
-    gripForce: float = Form(...),
-    sit_bend_cm: float = Form(...),
-    situps: int = Form(...),
-    broad_jump_cm: float = Form(...)
-):
-    
+                    age: float = Form(...),
+                    gender: str = Form(...),
+                    height_cm: float = Form(...),
+                    weight_kg: float = Form(...),
+                    body_fat: float = Form(...),
+                    diastolic: float = Form(...),
+                    systolic: float = Form(...),
+                    gripForce: float = Form(...),
+                    sit_bend_cm: float = Form(...),
+                    situps: int = Form(...),
+                    broad_jump_cm: float = Form(...)
+                ):
 
-
-    input_data = {
+    try:
+        input_data = {
         "age": age,
         "gender": gender,
         "height_cm": height_cm,
@@ -81,5 +87,10 @@ async def predict(
         "sit-ups_counts": situps,
         "broad_jump_cm": broad_jump_cm,
     }
+        lw_log.write_log(f"✅ Recibido datos {input_data}")
+        
+    except Exception as e:
+        lw_log.write_log(f"💥Error al procesar los datos {input_data}")
+    
     print("Received data:", input_data)
     return JSONResponse(input_data)
