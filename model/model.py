@@ -42,7 +42,7 @@ gb = GradientBoostingClassifier(random_state=42)
 random_search = RandomizedSearchCV(
     estimator=gb,
     param_distributions=param_dist,
-    n_iter=10,
+    n_iter=8,
     scoring='accuracy',
     cv=3,
     verbose=1,
