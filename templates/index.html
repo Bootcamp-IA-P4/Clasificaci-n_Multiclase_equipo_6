@@ -360,6 +360,15 @@
         /> 
         <pre>{{ load_logs }}</pre>
       </dialog>
+      <dialog id="predict">
+        <img
+          src="{{ url_for('static', path='img/boton.png') }}"
+          class="booton"
+          title="Close window"
+          onclick="window.predict.close();"
+        /> 
+        <div id="result"></div>
+      </dialog>
       <section class="section">
       <table id="myTable" class="display">
         <thead>
@@ -430,10 +439,6 @@
         });
     </script>
     <script src="static/model_3d.js"></script>
-    <div id="result"></div>
-
-    <script>
-
-    </script>
+    
   </body>
 </html>
