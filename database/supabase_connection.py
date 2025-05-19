@@ -1,0 +1,40 @@
+import os
+from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
+# Initialize Supabase client
+
+supabase: Client = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+# Save data to Supabase
+def save_completa(data_dict):
+    try:
+        response = supabase.table("body_performance").insert(data_dict).execute()
+        print("Fila guardada correctamente en la base de datos (supabase).")
+        return response
+    except Exception as e:
+        print("Error al guardar en Supabase:", e)
+        return None
+
+def save_fill_complete(features: dict):
+    try:
+        data_dict = {
+            "age": features.get("age"),
+            "gender": features.get("gender"),
+            "height_cm": features.get("height_cm"),
+            "weight_kg": features.get("weight_kg"),
+            "body_fat_%": features.get("body_fat_%"),
+            "diastolic": features.get("diastolic"),
+            "systolic": features.get("systolic"),
+            "gripForce": features.get("gripForce"),
+            "sit_and_bend_forward_cm": features.get("sit_and_bend_forward_cm"),
+            "sit-ups_counts": features.get("sit-ups_counts"),
+            "broad_jump_cm": features.get("broad_jump_cm"),
+        }
+        #print("data_dict:", data_dict)
+        save_completa(data_dict)
+        #return response
+    except Exception as e:
+        print("BD Error while saving data:", e)
+
+        return None

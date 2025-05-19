@@ -5,14 +5,13 @@ from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.templating import Jinja2Templates
 from datetime import datetime
 from core.config import settings
-from database.pg_connection import get_connection
+from database.supabase_connection import save_fill_complete
 
 
 import pandas as pd
 from typing import Optional, List
 
 from fastapi import status
-import psycopg2
 
 
 
@@ -87,25 +86,5 @@ async def predict(
     }
     
     print("Received data:", input_data)
-
-    # try:
-    #     conn = get_connection()
-    #     if conn is None:
-    #         raise Exception("No se pudo establecer la conexión")
-
-    #     cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-    #     columns = ', '.join(input_data.keys())
-    #     placeholders = ', '.join(['%s'] * len(input_data))
-    #     insert_query = f"INSERT INTO body_performance ({columns}) VALUES ({placeholders})"
-    #     cursor.execute(insert_query, tuple(input_data.values()))
-    #     conn.commit()
-    #     cursor.close()
-    #     conn.close()
-
-    # except Exception as e:
-    #     return JSONResponse(
-    #         {"error": f"No se pudo insertar en la base de datos: {e}"},
-    #         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
-    #     )
-
+    save_fill_complete(input_data)
     return JSONResponse(input_data)
