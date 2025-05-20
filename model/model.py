@@ -1,11 +1,12 @@
 import pandas as pd
 import os
 import joblib
-from sklearn.model_selection import train_test_split, RandomizedSearchCV
+from sklearn.model_selection import train_test_split, RandomizedSearchCV, StratifiedKFold
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
+
 
 
 
@@ -53,13 +54,13 @@ pipeline = Pipeline([
     ('preprocessing', preprocessor),
     ('model', gb)
 ])
-# Búsqueda de hiperparámetros
+# Búsqueda de hiperparámetros, StratifiedKFold mantiene la proporción de clases en cada fold
 random_search = RandomizedSearchCV(
     estimator=pipeline,
     param_distributions=param_dist,
     n_iter=8,
     scoring='accuracy',
-    cv=3,
+    cv=StratifiedKFold(n_splits=3, shuffle=True, random_state=42),
     verbose=1,
     random_state=42,
     n_jobs=-1
