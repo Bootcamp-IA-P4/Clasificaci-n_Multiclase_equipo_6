@@ -7,12 +7,15 @@ from datetime import datetime
 from core.config import settings
 import core.lw_log as lw_log
 import github.data_github as github
-
+from model.utils import map_gender
+import joblib
 
 import pandas as pd
 from typing import Optional, List
 
-
+model = joblib.load("model/model.pkl")
+class_map = joblib.load("model/class_map.pkl")
+inv_class_map = {v: k for k, v in class_map.items()}
 
 # uvicorn main:app --reload
 
@@ -79,18 +82,24 @@ async def predict(
         "gender": gender,
         "height_cm": height_cm,
         "weight_kg": weight_kg,
-        "body_fat_%": body_fat,
+        "body_fat_percent": body_fat,
         "diastolic": diastolic,
         "systolic": systolic,
-        "gripForce": gripForce,
+        "gripforce": gripForce,
         "sit_and_bend_forward_cm": sit_bend_cm,
-        "sit-ups_counts": situps,
+        "sit_ups_counts": situps,
         "broad_jump_cm": broad_jump_cm,
-    }
+        }
         lw_log.write_log(f"✅ Recibido datos {input_data}")
-        
+        df = pd.DataFrame([input_data])
+        pred = model.predict(df)[0]
+        proba = model.predict_proba(df).max()
+        class_label = inv_class_map[pred]
+        result = {
+                "prediction": class_label,
+                "probability": float(proba)
+            }
+        print("Prediction result:", result)
+        return JSONResponse(result)
     except Exception as e:
         lw_log.write_log(f"💥Error al procesar los datos {input_data}")
-    
-    print("Received data:", input_data)
-    return JSONResponse(input_data)
