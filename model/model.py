@@ -5,6 +5,8 @@ from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import FunctionTransformer
+
 
 
 current_dir = os.getcwd()
@@ -20,7 +22,6 @@ gender_map = joblib.load(os.path.join('gender_map.pkl'))
 class_map = joblib.load(os.path.join('class_map.pkl'))
 
 
-df_model['gender'] = df_model['gender'].map(gender_map)
 df_model['class'] = df_model['class'].map(class_map)
 
 
@@ -31,16 +32,30 @@ y = df_model['class']
 XTrain, XTest, yTrain, yTest = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
-param_dist = {
-    'n_estimators': [100, 200],
-    'learning_rate': [0.05, 0.1],
-    'max_depth': [3, 5]
-}
+def map_gender(X):
+    X = X.copy()
+    X['gender'] = X['gender'].map(gender_map)
+    return X
+gender_mapper = FunctionTransformer(map_gender)
+preprocessor = Pipeline([
+    ('gender_mapper',gender_mapper)
+])
+
 gb = GradientBoostingClassifier(random_state=42)
 
+param_dist = {
+    'model__n_estimators': [100, 200],
+    'model__learning_rate': [0.05, 0.1],
+    'model__max_depth': [3, 5],
+}
+
+pipeline = Pipeline([
+    ('preprocessing', preprocessor),
+    ('model', gb)
+])
 # Búsqueda de hiperparámetros
 random_search = RandomizedSearchCV(
-    estimator=gb,
+    estimator=pipeline,
     param_distributions=param_dist,
     n_iter=8,
     scoring='accuracy',
@@ -57,19 +72,13 @@ print("Mejores parámetros:", random_search.best_params_)
 
 best_gb = random_search.best_estimator_
 
-# Creamos pipeline
-pipeline = Pipeline([
-    ('model', best_gb)
-])
-
-pipeline.fit(XTrain, yTrain)
-
 pipeline_path = os.path.join('model.pkl')
-joblib.dump(pipeline, pipeline_path)
-print(f"Pipeline entrenado guardado en: {pipeline_path}")
+joblib.dump(best_gb, pipeline_path)
+print(f"Modelo entrenado guardado en: {pipeline_path}")
 
-y_train_pred = pipeline.predict(XTrain)
-y_test_pred = pipeline.predict(XTest)
+
+y_train_pred = best_gb.predict(XTrain)
+y_test_pred = best_gb.predict(XTest)
 
 print("Accuracy en train:", accuracy_score(yTrain, y_train_pred))
 print("Accuracy en test:", accuracy_score(yTest, y_test_pred))
