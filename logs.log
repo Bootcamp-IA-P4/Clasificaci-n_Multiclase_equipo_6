@@ -161,3 +161,9 @@
 [2025-05-20 14:53:25.624005] ✅ Recibido datos {'age': 34.0, 'gender': 'F', 'height_cm': 179.0, 'weight_kg': 63.0, 'body_fat_percent': 19.66230766829999, 'diastolic': 106.0, 'systolic': 82.0, 'gripforce': 39.0, 'sit_and_bend_forward_cm': 34.0, 'sit_ups_counts': 41, 'broad_jump_cm': 129.0}
 [2025-05-20 14:56:36.645887] ✅ Recibido datos {'age': 34.0, 'gender': 'F', 'height_cm': 179.0, 'weight_kg': 63.0, 'body_fat_percent': 19.66230766829999, 'diastolic': 106.0, 'systolic': 82.0, 'gripforce': 39.0, 'sit_and_bend_forward_cm': 34.0, 'sit_ups_counts': 41, 'broad_jump_cm': 129.0}
 [2025-05-20 14:58:57.588584] ✅ Recibido datos {'age': 34.0, 'gender': 'F', 'height_cm': 179.0, 'weight_kg': 63.0, 'body_fat_percent': 19.66230766829999, 'diastolic': 106.0, 'systolic': 82.0, 'gripforce': 39.0, 'sit_and_bend_forward_cm': 34.0, 'sit_ups_counts': 41, 'broad_jump_cm': 129.0}
+[2025-05-20 15:02:45.482364] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-20 15:02:47.107028] 1. Nho89 - 23 contribuciones
+[2025-05-20 15:02:47.109027] 2. marie-adi - 18 contribuciones
+[2025-05-20 15:02:47.114478] ✅ Acceso a la página principal
+[2025-05-20 15:02:48.788037] ✅ Última versión: v1.1.0
+[2025-05-20 15:02:56.878746] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}

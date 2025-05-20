@@ -4,4 +4,4 @@ venv
 __pycache__
 *.pyc
 .qodo
-
+logs.log
