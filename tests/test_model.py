@@ -4,17 +4,12 @@ import joblib
 import os
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+from model.utils import map_gender
 
-def map_gender(X):
-    gender_map = {'M': 0, 'F': 1}
-    X = X.copy()
-    X['gender'] = X['gender'].map(gender_map)
-    return X
 
-current_dir = os.getcwd()
-parent_dir = os.path.dirname(current_dir)
-model_path = os.path.join(parent_dir, 'model', 'model.pkl')
-data_path = os.path.join(parent_dir, 'data', 'bodyPerformance.csv')
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+model_path = os.path.join(project_root, 'model', 'model.pkl')
+data_path = os.path.join(project_root, 'data', 'clean_data.csv')
 
 class TestModel(unittest.TestCase):
     def setUp(self):
@@ -27,7 +22,7 @@ class TestModel(unittest.TestCase):
 
     def test_input_integrity(self):
         self.assertFalse(self.X.isnull().values.any(), "Los datos de entrada contienen valores nulos.")
-        columns = {'age','gender','height_cm','weight_kg','body fat_%','diastolic','systolic','gripForce','sit and bend forward_cm','sit-ups counts','broad jump_cm'}
+        columns = {'age','gender','height_cm','weight_kg','body_fat_percent','diastolic','systolic','gripforce','sit_and_bend_forward_cm','sit_ups_counts','broad_jump_cm'}
         self.assertTrue(columns.issubset(set(self.X.columns)), "Faltan columnas en los datos de entrada.")
 
     def test_model_run(self):
@@ -43,7 +38,7 @@ class TestModel(unittest.TestCase):
 
     def test_minimum_accuracy(self):
         df = pd.read_csv(data_path)
-        class_map = joblib.load(os.path.join(parent_dir, 'model', 'class_map.pkl'))
+        class_map = joblib.load(os.path.join(project_root, 'model', 'class_map.pkl'))
         df['class'] = df['class'].map(class_map)
         X = df.drop(columns=['class'])
         y = df['class']

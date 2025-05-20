@@ -6,22 +6,19 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
-from utils import map_gender
+from model.utils import map_gender
 
 
 
-current_dir = os.getcwd()
-parent_dir = os.path.dirname(current_dir)
-data_dir = os.path.join(parent_dir, "data")
-csv_path = os.path.join(data_dir, "bodyPerformance.csv")
-
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_dir = os.path.join(project_root, "data")
+csv_path = os.path.join(data_dir, "clean_data.csv")
 
 df_model = pd.read_csv(csv_path)
 
 
-gender_map = joblib.load(os.path.join('gender_map.pkl'))
-class_map = joblib.load(os.path.join('class_map.pkl'))
-
+gender_map = joblib.load(os.path.join(os.path.dirname(__file__), 'gender_map.pkl'))
+class_map = joblib.load(os.path.join(os.path.dirname(__file__), 'class_map.pkl'))
 
 df_model['class'] = df_model['class'].map(class_map)
 
@@ -70,7 +67,7 @@ print("Mejores parámetros:", random_search.best_params_)
 
 best_gb = random_search.best_estimator_
 
-pipeline_path = os.path.join('model.pkl')
+pipeline_path = os.path.join('model/model.pkl')
 joblib.dump(best_gb, pipeline_path)
 print(f"Modelo entrenado guardado en: {pipeline_path}")
 
