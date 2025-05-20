@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
-
+from utils import map_gender
 
 
 
@@ -33,10 +33,7 @@ y = df_model['class']
 XTrain, XTest, yTrain, yTest = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
-def map_gender(X):
-    X = X.copy()
-    X['gender'] = X['gender'].map(gender_map)
-    return X
+
 gender_mapper = FunctionTransformer(map_gender)
 preprocessor = Pipeline([
     ('gender_mapper',gender_mapper)
