@@ -7,7 +7,8 @@ from datetime import datetime
 from core.config import settings
 import core.lw_log as lw_log
 import github.data_github as github
-
+import joblib
+from model.utils import map_gender
 
 import pandas as pd
 from typing import Optional, List
@@ -17,6 +18,7 @@ from typing import Optional, List
 # uvicorn main:app --reload
 
 
+model = joblib.load("model/model.pkl")
 
 #Crear la app
 app = FastAPI(
@@ -79,18 +81,20 @@ async def predict(
         "gender": gender,
         "height_cm": height_cm,
         "weight_kg": weight_kg,
-        "body_fat_%": body_fat,
+        "body fat_%": body_fat,
         "diastolic": diastolic,
         "systolic": systolic,
         "gripForce": gripForce,
-        "sit_and_bend_forward_cm": sit_bend_cm,
-        "sit-ups_counts": situps,
-        "broad_jump_cm": broad_jump_cm,
+        "sit and bend forward_cm": sit_bend_cm,
+        "sit-ups counts": situps,
+        "broad jump_cm": broad_jump_cm,
     }
-        lw_log.write_log(f"✅ Recibido datos {input_data}")
-        
+        df = pd.DataFrame([input_data])
+        prediction = model.predict(df)[0]
+        lw_log.write_log(f"✅ Recibido datos {input_data} - Predicción: {prediction}")
+        return JSONResponse({"input": input_data, "prediction": int(prediction)})
     except Exception as e:
-        lw_log.write_log(f"💥Error al procesar los datos {input_data}")
-    
+        lw_log.write_log(f"💥Error al procesar los datos {input_data}: {e}")
+        return JSONResponse({"error": str(e)})
     print("Received data:", input_data)
     return JSONResponse(input_data)
