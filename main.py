@@ -8,16 +8,16 @@ from core.config import settings
 from database.supabase_connection import save_fill_complete
 import core.lw_log as lw_log
 import github.data_github as github
-from model.utils import map_gender
+#from model.utils import map_gender
 import joblib
 
 import pandas as pd
-from typing import Optional, List
+#from typing import Optional, List
 
-from fastapi import status
+#from fastapi import status
 
-model = joblib.load("model/model.pkl")
-class_map = joblib.load("model/class_map.pkl")
+model = joblib.load(settings.model_path_A)
+class_map = joblib.load(settings.class_map_path)
 inv_class_map = {v: k for k, v in class_map.items()}
 
 # uvicorn main:app --reload
