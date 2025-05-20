@@ -1,6 +1,7 @@
 import os
 from supabase import create_client, Client
 from dotenv import load_dotenv
+import core.lw_log as lw_log
 
 load_dotenv()
 # Initialize Supabase client
@@ -11,8 +12,10 @@ def save_completa(data_dict):
     try:
         response = supabase.table("body_performance").insert(data_dict).execute()
         print("Fila guardada correctamente en la base de datos (supabase).")
+        lw_log.write_log(f"✅ Los datos se han guardado correctamente")
         return response
     except Exception as e:
+        lw_log.write_log(f"❌ Parece que ha habido un error con la BBDD: {e}")
         print("Error al guardar en Supabase:", e)
         return None
 

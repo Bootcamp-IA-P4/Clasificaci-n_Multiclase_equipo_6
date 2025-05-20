@@ -109,3 +109,18 @@ fieldset .next{
 .center{
     text-align: center;
 }
+  .step { display: none; }
+  #step1:checked ~ .form-step1,
+  #step2:checked ~ .form-step2,
+  #step3:checked ~ .form-step3 {
+    display: block;
+  }
+
+  .hidden-radio {
+    display: none;
+  }
+
+  button {
+    display: block;
+    margin-top: 10px;
+  }

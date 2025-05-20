@@ -156,14 +156,19 @@ window.addEventListener("DOMContentLoaded", calcularIMC);
             }
 
             const result = await response.json();
-
+            const dialog = document.getElementById("predict");
+            if (dialog) {
+              //
+              dialog.showModal();
+              //document.getElementById("closeDialogBtn").onclick = () => dialog.close();
+            }
             // Puedes personalizar el resultado según la respuesta de la API
             const output = `
               <h3>Resultado del Análisis</h3>
               <h4>Predicción:</h4>
               <pre>${JSON.stringify(result, null, 2)}</pre>
             `;
-
+            
             document.getElementById("result").innerHTML = output;
           } catch (error) {
             document.getElementById("result").innerHTML = `

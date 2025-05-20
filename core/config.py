@@ -5,6 +5,7 @@ class Settings:
         self.model_path_A = "data/model_clf.pkl"
 
         self.proyect_name = "My body performance"
+        self.repository = "https://api.github.com/repos/Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6"
         self.version = "1.0.0"
         self.description = "Assessment of body performance in the sports context"
 
