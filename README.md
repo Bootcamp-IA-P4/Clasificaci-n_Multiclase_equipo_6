@@ -1,5 +1,3 @@
-# Clasificación_Multiclase_equipo_6
-
 <div align="center">
   <img src="https://res.cloudinary.com/artevivo/image/upload/v1747827308/Presentaci%C3%B3n_Ejercicio_y_Entrenamiento_Moderno_Blanco_y_Negro_bevvsf.jpg" alt="Banner centrado" width="900" height="450">
 </div>
@@ -21,7 +19,7 @@
 
 ##  About the Project
 
-
+Are you fit enough for a physical challenge, a competitive exam, or an active lifestyle? This project aims to answer that question in less than a second, using just your physical data and a few simple performance tests.
 
 ---
 
