@@ -28,7 +28,8 @@ app = FastAPI(
     description=settings.description,
     version=settings.version
     )
-
+print("\n🚀 Uvicorn escuchando en 0.0.0.0:8000 (dentro del contenedor)")
+print("🌐 Accede desde tu navegador en: http://127.0.0.1:8000\n")
 
 #Servir carpeta static
 app.mount("/static", StaticFiles(directory="static"), name="static")
