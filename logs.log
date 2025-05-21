@@ -167,3 +167,31 @@
 [2025-05-20 15:02:47.114478] ✅ Acceso a la página principal
 [2025-05-20 15:02:48.788037] ✅ Última versión: v1.1.0
 [2025-05-20 15:02:56.878746] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 08:53:12.184418] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 08:53:12.668528] 1. Nho89 - 23 contribuciones
+[2025-05-21 08:53:12.669196] 2. marie-adi - 18 contribuciones
+[2025-05-21 08:53:12.670573] ✅ Acceso a la página principal
+[2025-05-21 08:53:13.121252] ✅ Última versión: v1.2.0
+[2025-05-21 08:54:23.840663] ✅ Recibido datos {'age': 33.0, 'gender': 'M', 'height_cm': 177.0, 'weight_kg': 100.0, 'body_fat_percent': 31.91930798940279, 'diastolic': 114.0, 'systolic': 95.0, 'gripforce': 48.0, 'sit_and_bend_forward_cm': 17.0, 'sit_ups_counts': 30, 'broad_jump_cm': 105.0}
+[2025-05-21 08:54:25.113741] ✅ Predicción realizada: D con probabilidad 0.9852932077635644
+[2025-05-21 08:57:20.660831] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 08:57:21.141424] 1. Nho89 - 23 contribuciones
+[2025-05-21 08:57:21.141934] 2. marie-adi - 18 contribuciones
+[2025-05-21 08:57:21.143323] ✅ Acceso a la página principal
+[2025-05-21 08:57:21.603732] ✅ Última versión: v1.2.0
+[2025-05-21 08:59:09.197362] ✅ Recibido datos {'age': 28.0, 'gender': 'F', 'height_cm': 170.0, 'weight_kg': 80.0, 'body_fat_percent': 27.68166089965398, 'diastolic': 130.0, 'systolic': 90.0, 'gripforce': 35.0, 'sit_and_bend_forward_cm': 30.0, 'sit_ups_counts': 50, 'broad_jump_cm': 120.0}
+[2025-05-21 08:59:09.722546] ✅ Predicción realizada: B con probabilidad 0.5677791664101718
+[2025-05-21 08:59:54.360553] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 08:59:54.871417] 1. Nho89 - 23 contribuciones
+[2025-05-21 08:59:54.871854] 2. marie-adi - 18 contribuciones
+[2025-05-21 08:59:54.873223] ✅ Acceso a la página principal
+[2025-05-21 08:59:55.321291] ✅ Última versión: v1.2.0
+[2025-05-21 09:01:12.207574] ✅ Recibido datos {'age': 23.0, 'gender': 'M', 'height_cm': 195.0, 'weight_kg': 90.0, 'body_fat_percent': 23.668639053254438, 'diastolic': 80.0, 'systolic': 100.0, 'gripforce': 60.0, 'sit_and_bend_forward_cm': 30.0, 'sit_ups_counts': 55, 'broad_jump_cm': 135.0}
+[2025-05-21 09:01:12.742643] ✅ Predicción realizada: B con probabilidad 0.4718592499297376
+[2025-05-21 07:10:49.560081] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 07:10:49.880750] 1. Nho89 - 23 contribuciones
+[2025-05-21 07:10:49.883200] 2. marie-adi - 18 contribuciones
+[2025-05-21 07:10:49.887193] ✅ Acceso a la página principal
+[2025-05-21 07:10:50.271963] ✅ Última versión: v1.2.0
+[2025-05-21 07:11:46.587473] ✅ Recibido datos {'age': 35.0, 'gender': 'M', 'height_cm': 205.0, 'weight_kg': 100.0, 'body_fat_percent': 23.79535990481856, 'diastolic': 75.0, 'systolic': 110.0, 'gripforce': 64.0, 'sit_and_bend_forward_cm': 27.0, 'sit_ups_counts': 60, 'broad_jump_cm': 180.0}
+[2025-05-21 07:11:47.159896] ✅ Predicción realizada: D con probabilidad 0.410008428627674

@@ -9,6 +9,7 @@ import core.lw_log as lw_log
 import github.data_github as github
 from model.utils import map_gender
 import joblib
+from database.supabase_connection import save_fill_complete
 
 import pandas as pd
 from typing import Optional, List
@@ -95,7 +96,9 @@ async def predict(
         pred = model.predict(df)[0]
         proba = model.predict_proba(df).max()
         class_label = inv_class_map[pred]
-        result = {
+        save_fill_complete(input_data, class_label)
+        lw_log.write_log(f"✅ Predicción realizada: {class_label} con probabilidad {proba}")
+        result = {  
                 "prediction": class_label,
                 "probability": float(proba)
             }
