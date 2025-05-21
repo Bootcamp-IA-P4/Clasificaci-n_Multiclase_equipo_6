@@ -12,6 +12,7 @@ import github.data_github as github
 import joblib
 
 import pandas as pd
+from fastapi import Query
 #from typing import Optional, List
 
 #from fastapi import status
@@ -111,3 +112,8 @@ async def predict(
         return JSONResponse(result)
     except Exception as e:
         lw_log.write_log(f"💥Error al procesar los datos {input_data}")
+
+@app.get(settings.api_prefix+settings.api_version+"/logs")
+async def logs(request: Request, date: str = Query(None, description="Fecha en formato YYYY-MM-DD")):
+    logs = lw_log.read_file_logs(date) if date else lw_log.read_file_logs()
+    return logs.strip('"')
