@@ -2,12 +2,11 @@ import pandas as pd
 import os
 import joblib
 from sklearn.model_selection import train_test_split, RandomizedSearchCV, StratifiedKFold
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
 from model.utils import map_gender
-
 
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,11 +74,30 @@ print(f"Modelo entrenado guardado en: {pipeline_path}")
 y_train_pred = best_gb.predict(XTrain)
 y_test_pred = best_gb.predict(XTest)
 
-print("Accuracy en train:", accuracy_score(yTrain, y_train_pred))
-print("Accuracy en test:", accuracy_score(yTest, y_test_pred))
-print("F1-score en train:", f1_score(yTrain, y_train_pred, average='weighted'))
-print("F1-score en test:", f1_score(yTest, y_test_pred, average='weighted'))
+print("\n=== Métricas de Entrenamiento ===")
+print(f"Accuracy:  {accuracy_score(yTrain, y_train_pred):.4f}")
+print(f"Precision: {precision_score(yTrain, y_train_pred, average='weighted'):.4f}")
+print(f"Recall:    {recall_score(yTrain, y_train_pred, average='weighted'):.4f}")
+print(f"F1 Score:  {f1_score(yTrain, y_train_pred, average='weighted'):.4f}")
+try:
+    y_train_proba = best_gb.predict_proba(XTrain)
+    print(f"ROC AUC:   {roc_auc_score(yTrain, y_train_proba, multi_class='ovr'):.4f}")
+except Exception as e:
+    print(f"ROC AUC:   No calculable ({e})")
 
+
+print("\n=== Métricas del modelo (Test) ===")
+print(f"Accuracy:  {accuracy_score(yTest, y_test_pred):.4f}")
+print(f"Precision: {precision_score(yTest, y_test_pred, average='weighted'):.4f}")
+print(f"Recall:    {recall_score(yTest, y_test_pred, average='weighted'):.4f}")
+print(f"F1 Score:  {f1_score(yTest, y_test_pred, average='weighted'):.4f}")
+
+try:
+    y_test_proba = best_gb.predict_proba(XTest)
+    print(f"ROC AUC:   {roc_auc_score(yTest, y_test_proba, multi_class='ovr'):.4f}")
+except Exception as e:
+    print(f"ROC AUC:   No calculable ({e})")
+     
 train_acc = accuracy_score(yTrain, y_train_pred)
 test_acc = accuracy_score(yTest, y_test_pred)
 diff = train_acc - test_acc
