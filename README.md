@@ -21,6 +21,12 @@
 
 Are you fit enough for a physical challenge, a competitive exam, or an active lifestyle? This project aims to answer that question in less than a second, using just your physical data and a few simple performance tests.
 
+This multi-class classification project aims to estimate a person's physical performance level (classes A, B, C, or D) based on their body measurements and standardized physical test results.
+
+The model was trained using a dataset from the Korea Sports Promotion Foundation, which includes variables such as age, gender, blood pressure, grip strength, flexibility, and jump distance. These kinds of assessments are commonly used in sports programs, fitness evaluations, or entrance exams for public service roles and can be performed in gyms or training centers.
+
+Although the data originates from Korea, the features used are universal, making the model adaptable to other countries with similar evaluation standards. The goal is to offer a fast, objective tool to support physical readiness without making any personal judgments.
+
 ---
 
 ## 🔍 Main Features  
