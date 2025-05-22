@@ -252,3 +252,5 @@
 [2025-05-21 07:44:48.770328] ✅ Recibido datos {'age': 32.0, 'gender': 'F', 'height_cm': 177.0, 'weight_kg': 61.0, 'body_fat_percent': 19.4707778735357, 'diastolic': 70.0, 'systolic': 83.0, 'gripforce': 33.0, 'sit_and_bend_forward_cm': 32.0, 'sit_ups_counts': 47, 'broad_jump_cm': 131.0}
 [2025-05-21 07:44:49.582239] ✅ Predicción realizada: A con probabilidad 0.5403058974957752
 >>>>>>> 292b5a7ae043fc53cc4073352fa801c8c183f354
+[2025-05-22 08:16] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 08:17] ✅ Última versión: v1.3.0
