@@ -1,7 +1,6 @@
 const heightInput = document.getElementById("height_cm");
 const weightInput = document.getElementById("weight_kg");
 const imcDisplay = document.getElementById("imc_val");
-
 const alturaLabel = document.getElementById("altura_val");
 const pesoLabel = document.getElementById("peso_val");
 const genderInput = document.getElementById("gender");
@@ -9,11 +8,16 @@ const options = document.querySelectorAll(".gender-option");
 const gripRange = document.getElementById("gripforce");
 const sit_bend_cm = document.getElementById("sit_bend_cm");
 const gripValue = document.getElementById("gripValue");
-const sit_bend_cm_Value = document.getElementById("sit_bend_cm_Value");
 const situps = document.getElementById("situps");
-const situps_Value = document.getElementById("situps_Value");
 const broad_jump_cm = document.getElementById("broad_jump_cm");
-const broad_jump_cm_Value = document.getElementById("broad_jump_cm_Value");
+const diastolic = document.getElementById("diastolic");
+const systolic = document.getElementById("systolic");
+
+updateValue_sis(systolic.value);
+updateValue_dia(diastolic.value);
+updateValue_sit_bend_cm(sit_bend_cm.value);
+updateValue_situps(situps.value);
+updateValue_broad_jump_cm(broad_jump_cm.value);
 
 options.forEach((img) => {
   img.addEventListener("click", () => {
@@ -25,32 +29,20 @@ options.forEach((img) => {
     console.log("Selección " + img.dataset.value);
     if (img.dataset.value === "M") {
       gripRange.value = 45;
-      gripRange.min = 10;
-      gripRange.max = 70;
       //
-      (sit_bend_cm.value = 20), (sit_bend_cm.min = 10);
-      sit_bend_cm.max = 35;
+      sit_bend_cm.value = 20;
       //
       situps.value = 45;
       //
-      broad_jump_cm.value = 200;
-      broad_jump_cm.min = 100;
-      broad_jump_cm.max = 300;
+      broad_jump_cm.value = 180;
     } else if (img.dataset.value === "F") {
       gripRange.value = 30;
-      gripRange.min = 10;
-      gripRange.max = 50;
       //
-      (sit_bend_cm.value = 25), (sit_bend_cm.min = 20);
-      sit_bend_cm.max = 45;
+      sit_bend_cm.value = 25;
       //
       situps.value = 35;
       //
       broad_jump_cm.value = 150;
-      broad_jump_cm.min = 80;
-      broad_jump_cm.max = 250;
-    } else {
-      gripRange.value = 0;
     }
     gripValue.textContent = gripRange.value;
     // Asignar valor al input hidden
@@ -160,8 +152,8 @@ document
         //document.getElementById("closeDialogBtn").onclick = () => dialog.close();
       }
 
-
       console.log("Prediction:", result[0] + " " + result[1]);
+
       let output = `
         <h4>Predicción:</h4>
         <pre>${result[0].prediction}</pre>
@@ -173,24 +165,24 @@ document
         //"Altura (cm)",
         //"Peso (kg)",
         //"IMC (%)",
-        "Diastólica",
-        "Sistólica",
-        "Fuerza de agarre",
-        "Flexión sentado (cm)",
+        //"Diastólica",
+        //"Sistólica",
+        "F. agarre",
+        "Flexión sentado",
         "Abdominales",
-        "Salto largo (cm)",
+        "Salto largo",
       ];
       radarChart.data.datasets[0].data = [
         //result[1].age,
         //result[1].height_cm,
         //result[1].weight_kg,
         //result[1].body_fat_percent,
-        result[1].diastolic,
-        result[1].systolic,
+        //result[1].diastolic,
+        //result[1].systolic,
         result[1].gripforce,
         result[1].sit_and_bend_forward_cm,
         result[1].sit_ups_counts,
-        result[1].broad_jump_cm,
+        result[1].broad_jump_cm * 0.3,
       ];
 
       // Añadir otra fuente de datos como un nuevo dataset
@@ -198,27 +190,27 @@ document
         // Si ya existe un segundo dataset, actualízalo; si no, agrégalo
         if (radarChart.data.datasets.length > 1) {
           radarChart.data.datasets[1].data = [
-          result[2].diastolic,
-          result[2].systolic,
-          result[2].gripforce,
-          result[2].sit_and_bend_forward_cm,
-          result[2].sit_ups_counts,
-          result[2].broad_jump_cm,
+            //result[2].diastolic,
+            //result[2].systolic,
+            result[2][0],
+            result[2][1],
+            result[2][2],
+            result[2][3] * 0.3,
           ];
         } else {
           radarChart.data.datasets.push({
-        label: "Comparación",
-        data: [
-          result[2].diastolic,
-          result[2].systolic,
-          result[2].gripforce,
-          result[2].sit_and_bend_forward_cm,
-          result[2].sit_ups_counts,
-          result[2].broad_jump_cm,
-        ],
-        backgroundColor: "rgba(255,99,132,0.2)",
-        borderColor: "rgba(255,99,132,1)",
-        borderWidth: 1,
+            label: "Comparación",
+            data: [
+              //result[2].diastolic,
+              //result[2].systolic,
+              result[2][0],
+              result[2][1],
+              result[2][2],
+              result[2][3] * 0.3,
+            ],
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            borderWidth: 1,
           });
         }
       }
@@ -235,4 +227,13 @@ function updateValue_sis(value) {
 }
 function updateValue_dia(value) {
   document.getElementById("rangeValue_dia").innerText = value;
+}
+function updateValue_sit_bend_cm(value) {
+  document.getElementById("sit_bend_cm_Value").innerText = value;
+}
+function updateValue_situps(value) {
+  document.getElementById("situps_Value").innerText = value;
+}
+function updateValue_broad_jump_cm(value) {
+  document.getElementById("broad_jump_cm_Value").innerText = value;
 }

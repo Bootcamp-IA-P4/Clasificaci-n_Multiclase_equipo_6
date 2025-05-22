@@ -8,6 +8,7 @@ from core.config import settings
 from database.supabase_connection import save_fill_complete
 import core.lw_log as lw_log
 import github.data_github as github
+import avg_chart.chart as chart
 from database.conect_database import conect
 #from model.utils import map_gender
 import joblib
@@ -51,8 +52,7 @@ async def read_root(request: Request):
     github.get_repo_contributors()
     lw_log.write_log(f"✅ Acceso a la página principal")
     # Leer todos los registros de la tabla
-    #response = conect.client.table("body_performance").select("*").order("id", desc=False).execute()
-    response = conect.client.table("body_performance").select("*").execute()
+    response = conect.client.table("body_performance").select("*").order("id", desc=True).execute()
     # Redondear body_fat_percent a entero en cada registro
     if response.data:
         for row in response.data:
@@ -94,18 +94,20 @@ async def predict(
 
     try:
         input_data = {
-        "age": age,
-        "gender": gender,
-        "height_cm": height_cm,
-        "weight_kg": weight_kg,
-        "body_fat_percent": body_fat,
-        "diastolic": diastolic,
-        "systolic": systolic,
-        "gripforce": gripforce,
-        "sit_and_bend_forward_cm": sit_bend_cm,
-        "sit_ups_counts": situps,
-        "broad_jump_cm": broad_jump_cm,
-        }
+            "age": age,
+            "gender": gender,
+            "height_cm": height_cm,
+            "weight_kg": weight_kg,
+            "body_fat_percent": body_fat,
+            "diastolic": diastolic,
+            "systolic": systolic,
+            "gripforce": gripforce,
+            "sit_and_bend_forward_cm": sit_bend_cm,
+            "sit_ups_counts": situps,
+            "broad_jump_cm": broad_jump_cm,
+            }
+        chart_avg = chart.get_data(gender, age)
+        print("Media de salto:", chart_avg)
         lw_log.write_log(f"✅ Recibido datos {input_data}")
         # predicción
         df = pd.DataFrame([input_data])
@@ -121,8 +123,9 @@ async def predict(
         lw_log.write_log(f"✅ Prediction: {result}")
         # Guardar en la base de datos
         save_fill_complete(input_data, class_label)
-        return (result, input_data)
+        return (result, input_data, chart_avg)
     except Exception as e:
+        lw_log.write_log(f"🗑 Error: {e}")
         lw_log.write_log(f"💥Error al procesar los datos {input_data}")
 
 @app.get(settings.api_prefix+settings.api_version+"/logs")
