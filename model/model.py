@@ -39,7 +39,7 @@ gb = GradientBoostingClassifier(random_state=42)
 
 param_dist = {
     'model__n_estimators': [100, 200],
-    'model__learning_rate': [0.05, 0.1],
+    'model__learning_rate': [0.02, 0.05],
     'model__max_depth': [3, 5],
 }
 
