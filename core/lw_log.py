@@ -26,4 +26,4 @@ def read_file_logs(date_filter=None):
     
 def write_log(text):
     with open(LOG_PATH, "a", encoding="utf-8") as log:
-        log.write(f"[{datetime.now()}] {text}\n")
+        log.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M')}] {text}\n")

@@ -303,3 +303,451 @@
 [2025-05-21 07:01:24.928269] ✅ Acceso a la página principal
 [2025-05-21 07:01:25.049063] ✅ Última versión: v1.2.0
 [2025-05-21 07:06:04.270440] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:52:57.051354] ✅ Conexión a Supabase exitosa.
+[2025-05-21 17:11:21.086736] ✅ Conexión a Supabase exitosa.
+[2025-05-21 17:12:28.999012] ✅ Conexión a Supabase exitosa.
+[2025-05-21 17:21:35.455098] ✅ Conexión a Supabase exitosa.
+[2025-05-21 15:24:21.373359] ✅ Conexión a Supabase exitosa.
+[2025-05-21 15:24:50.673203] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:24:51.085934] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:24:51.088428] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:24:51.094822] ✅ Acceso a la página principal
+[2025-05-21 15:24:51.458268] ✅ Última versión: v1.2.0
+[2025-05-21 15:25:03.524470] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:25:03.547461] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 15:25:04.163507] ❌ Parece que ha habido un error con la BBDD: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'sit-ups_counts' column of 'body_performance' in the schema cache"}
+[2025-05-21 15:29:12.957563] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:29:12.981464] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 15:29:13.325537] ❌ Parece que ha habido un error con la BBDD: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'sit-ups_counts' column of 'body_performance' in the schema cache"}
+[2025-05-21 15:30:29.257658] ✅ Conexión a Supabase exitosa.
+[2025-05-21 15:32:09.296690] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:32:09.656817] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:32:09.659484] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:32:09.665118] ✅ Acceso a la página principal
+[2025-05-21 15:32:09.965766] ✅ Última versión: v1.2.0
+[2025-05-21 15:32:18.580663] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:32:18.608663] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 15:32:19.345512] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:34:35.642817] ✅ Conexión a Supabase exitosa.
+[2025-05-21 15:34:41.076358] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 134.0}
+[2025-05-21 15:34:41.101948] ✅ Prediction: {'prediction': 'D', 'probability': 0.3422678298162629}
+[2025-05-21 15:34:41.782961] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:35:42.835984] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:35:43.211164] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:35:43.213770] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:35:43.219240] ✅ Acceso a la página principal
+[2025-05-21 15:35:43.556568] ✅ Última versión: v1.2.0
+[2025-05-21 15:35:49.741058] ✅ Recibido datos {'age': 25.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-21 15:35:49.765958] ✅ Prediction: {'prediction': 'B', 'probability': 0.4181274347317434}
+[2025-05-21 15:35:49.973092] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:37:10.552202] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:37:10.914816] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:37:10.918265] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:37:10.924270] ✅ Acceso a la página principal
+[2025-05-21 15:37:11.287304] ✅ Última versión: v1.2.0
+[2025-05-21 15:37:22.124468] ✅ Recibido datos {'age': 25.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-21 15:37:22.151500] ✅ Prediction: {'prediction': 'B', 'probability': 0.4181274347317434}
+[2025-05-21 15:37:22.555003] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:39:06.796313] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:39:07.187154] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:39:07.191619] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:39:07.198215] ✅ Acceso a la página principal
+[2025-05-21 15:39:07.529382] ✅ Última versión: v1.2.0
+[2025-05-21 15:39:13.460750] ✅ Recibido datos {'age': 25.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-21 15:39:13.491627] ✅ Prediction: {'prediction': 'B', 'probability': 0.4181274347317434}
+[2025-05-21 15:39:13.921253] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:40:50.788008] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:40:51.149399] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:40:51.152534] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:40:51.158196] ✅ Acceso a la página principal
+[2025-05-21 15:40:51.465356] ✅ Última versión: v1.2.0
+[2025-05-21 15:40:58.339529] ✅ Recibido datos {'age': 25.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-21 15:40:58.359851] ✅ Prediction: {'prediction': 'B', 'probability': 0.4181274347317434}
+[2025-05-21 15:40:58.925728] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:41:58.492842] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:41:58.882097] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:41:58.884609] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:41:58.890360] ✅ Acceso a la página principal
+[2025-05-21 15:41:59.206333] ✅ Última versión: v1.2.0
+[2025-05-21 15:42:06.813094] ✅ Recibido datos {'age': 25.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-21 15:42:06.836158] ✅ Prediction: {'prediction': 'B', 'probability': 0.4181274347317434}
+[2025-05-21 15:42:07.239064] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:43:03.097982] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:43:03.418920] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:43:03.421754] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:43:03.427025] ✅ Acceso a la página principal
+[2025-05-21 15:43:03.714939] ✅ Última versión: v1.2.0
+[2025-05-21 15:43:10.524905] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:43:10.547354] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 15:43:11.181857] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:45:02.348515] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:45:02.693984] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:45:02.696148] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:45:02.701089] ✅ Acceso a la página principal
+[2025-05-21 15:45:03.007662] ✅ Última versión: v1.2.0
+[2025-05-21 15:45:09.573285] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:45:09.596750] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 15:45:10.141477] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:46:01.595951] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:46:01.935015] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:46:01.937861] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:46:01.943722] ✅ Acceso a la página principal
+[2025-05-21 15:46:02.237463] ✅ Última versión: v1.2.0
+[2025-05-21 15:46:09.052587] ✅ Recibido datos {'age': 25.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-21 15:46:09.074103] ✅ Prediction: {'prediction': 'B', 'probability': 0.4181274347317434}
+[2025-05-21 15:46:09.467291] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:46:54.942811] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:46:55.281391] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:46:55.285115] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:46:55.291071] ✅ Acceso a la página principal
+[2025-05-21 15:46:55.679660] ✅ Última versión: v1.2.0
+[2025-05-21 15:47:03.892925] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:47:03.916522] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 15:47:04.493573] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:47:33.737600] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:47:34.090654] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:47:34.093571] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:47:34.099375] ✅ Acceso a la página principal
+[2025-05-21 15:47:34.415189] ✅ Última versión: v1.2.0
+[2025-05-21 15:47:41.821307] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:47:41.844392] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 15:47:42.270134] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:51:39.612273] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:51:40.008011] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:51:40.010677] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:51:40.016597] ✅ Acceso a la página principal
+[2025-05-21 15:51:40.335591] ✅ Última versión: v1.2.0
+[2025-05-21 15:51:50.086726] ✅ Recibido datos {'age': 49.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-21 15:51:50.112827] ✅ Prediction: {'prediction': 'C', 'probability': 0.2853445983155535}
+[2025-05-21 15:51:50.688530] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:52:55.210347] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:52:55.531173] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:52:55.533367] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:52:55.539049] ✅ Acceso a la página principal
+[2025-05-21 15:52:55.874900] ✅ Última versión: v1.2.0
+[2025-05-21 15:53:06.773030] ✅ Recibido datos {'age': 33.0, 'gender': 'F', 'height_cm': 121.0, 'weight_kg': 75.0, 'body_fat_percent': 51.22600915238031, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 15:53:06.792582] ✅ Prediction: {'prediction': 'D', 'probability': 0.9775039817972302}
+[2025-05-21 15:53:07.001782] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:54:14.046179] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:54:14.379970] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:54:14.382785] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:54:14.388782] ✅ Acceso a la página principal
+[2025-05-21 15:54:14.705587] ✅ Última versión: v1.2.0
+[2025-05-21 15:54:33.189616] ✅ Recibido datos {'age': 22.0, 'gender': 'M', 'height_cm': 184.0, 'weight_kg': 67.0, 'body_fat_percent': 19.78969754253308, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 133.0}
+[2025-05-21 15:54:33.212266] ✅ Prediction: {'prediction': 'D', 'probability': 0.5128054575768101}
+[2025-05-21 15:54:33.581183] ✅ Los datos se han guardado correctamente
+[2025-05-21 15:57:25.708078] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 15:57:26.043125] 1. Nho89 - 23 contribuciones
+[2025-05-21 15:57:26.045273] 2. marie-adi - 18 contribuciones
+[2025-05-21 15:57:26.049588] ✅ Acceso a la página principal
+[2025-05-21 15:57:26.371343] ✅ Última versión: v1.2.0
+[2025-05-21 15:57:59.413025] ✅ Recibido datos {'age': 45.0, 'gender': 'F', 'height_cm': 163.0, 'weight_kg': 66.0, 'body_fat_percent': 24.840980089578082, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 36, 'broad_jump_cm': 134.0}
+[2025-05-21 15:57:59.436687] ✅ Prediction: {'prediction': 'A', 'probability': 0.3928769478899299}
+[2025-05-21 15:57:59.995891] ✅ Los datos se han guardado correctamente
+[2025-05-21 16:00:19.594794] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:00:19.993344] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:00:19.996219] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:00:20.001925] ✅ Acceso a la página principal
+[2025-05-21 16:00:20.303121] ✅ Última versión: v1.2.0
+[2025-05-21 16:00:51.454633] ✅ Recibido datos {'age': 35.0, 'gender': 'F', 'height_cm': 171.0, 'weight_kg': 70.0, 'body_fat_percent': 23.938989774631512, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 36, 'broad_jump_cm': 90.0}
+[2025-05-21 16:00:51.484001] ✅ Prediction: {'prediction': 'D', 'probability': 0.6478046967743811}
+[2025-05-21 16:00:52.105500] ✅ Los datos se han guardado correctamente
+[2025-05-21 16:08:00.393382] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:12:09.744540] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:12:10.205746] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:12:10.208382] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:12:10.213746] ✅ Acceso a la página principal
+[2025-05-21 16:12:10.525229] ✅ Última versión: v1.2.0
+[2025-05-21 16:12:21.988223] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:13:36.011902] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:13:36.336811] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:13:36.339607] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:13:36.345556] ✅ Acceso a la página principal
+[2025-05-21 16:13:37.407740] ✅ Última versión: v1.2.0
+[2025-05-21 16:15:22.276598] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:15:22.611152] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:15:22.613511] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:15:22.618472] ✅ Acceso a la página principal
+[2025-05-21 16:15:23.503753] ✅ Última versión: v1.2.0
+[2025-05-21 16:16:38.634508] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:16:54.420938] ❌ Error al obtener datos: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:16:54.601263] ❌ Error al obtener contribuidores: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:16:54.607002] ✅ Acceso a la página principal
+[2025-05-21 16:16:55.233137] ❌ GitHub API error.
+[2025-05-21 16:18:12.967853] ❌ Error al obtener datos: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:18:13.150124] ❌ Error al obtener contribuidores: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:18:13.155386] ✅ Acceso a la página principal
+[2025-05-21 16:18:13.894469] ❌ GitHub API error.
+[2025-05-21 16:18:49.590684] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:22:35.792278] ❌ Error al obtener datos: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:22:35.966401] ❌ Error al obtener contribuidores: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:22:35.972854] ✅ Acceso a la página principal
+[2025-05-21 16:22:56.059588] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:23:28.812676] ❌ Error al obtener datos: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:23:29.004567] ❌ Error al obtener contribuidores: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 16:23:29.011558] ✅ Acceso a la página principal
+[2025-05-21 16:25:04.231514] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:25:04.613714] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:25:04.616446] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:25:04.622778] ✅ Acceso a la página principal
+[2025-05-21 16:25:13.298006] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:25:18.414503] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:25:18.611718] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:25:18.614785] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:25:18.620381] ✅ Acceso a la página principal
+[2025-05-21 16:25:19.184935] ✅ Última versión: v1.2.0
+[2025-05-21 16:25:53.614827] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:25:53.959812] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:25:53.962838] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:25:53.968545] ✅ Acceso a la página principal
+[2025-05-21 16:25:54.722188] ✅ Última versión: v1.2.0
+[2025-05-21 16:26:51.162169] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:26:51.513522] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:26:51.516494] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:26:51.522330] ✅ Acceso a la página principal
+[2025-05-21 16:26:52.181673] ✅ Última versión: v1.2.0
+[2025-05-21 16:27:21.154962] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:40:04.773579] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:40:05.199126] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:40:05.201638] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:40:05.207480] ✅ Acceso a la página principal
+[2025-05-21 16:40:56.598026] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:41:35.736401] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:41:36.082255] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:41:36.085447] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:41:36.092100] ✅ Acceso a la página principal
+[2025-05-21 16:42:56.297610] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:42:56.662206] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:42:56.664686] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:42:56.669785] ✅ Acceso a la página principal
+[2025-05-21 16:43:03.730359] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:43:10.587057] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:43:10.780838] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:43:10.783054] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:43:10.788429] ✅ Acceso a la página principal
+[2025-05-21 16:43:11.559537] ✅ Última versión: v1.2.0
+[2025-05-21 16:50:47.499077] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:50:47.939934] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:50:47.943250] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:50:47.949776] ✅ Acceso a la página principal
+[2025-05-21 16:50:49.146367] ✅ Última versión: v1.2.0
+[2025-05-21 16:52:05.080757] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:52:05.434639] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:52:05.437236] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:52:05.443516] ✅ Acceso a la página principal
+[2025-05-21 16:52:06.035379] ✅ Última versión: v1.2.0
+[2025-05-21 16:54:47.827613] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:54:48.186707] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:54:48.189310] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:54:48.194802] ✅ Acceso a la página principal
+[2025-05-21 16:54:49.023761] ✅ Última versión: v1.2.0
+[2025-05-21 16:56:02.343080] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:56:02.731346] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:56:02.734627] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:56:02.740363] ✅ Acceso a la página principal
+[2025-05-21 16:56:03.452835] ✅ Última versión: v1.2.0
+[2025-05-21 16:57:28.717760] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:57:29.078301] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:57:29.081343] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:57:29.087665] ✅ Acceso a la página principal
+[2025-05-21 16:57:29.923562] ✅ Última versión: v1.2.0
+[2025-05-21 16:59:12.208244] ✅ Conexión a Supabase exitosa.
+[2025-05-21 16:59:15.256611] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:59:15.615885] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:59:15.619291] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:59:15.625738] ✅ Acceso a la página principal
+[2025-05-21 16:59:16.633725] ✅ Última versión: v1.2.0
+[2025-05-21 16:59:45.393508] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 16:59:45.738861] 1. Nho89 - 23 contribuciones
+[2025-05-21 16:59:45.741581] 2. marie-adi - 18 contribuciones
+[2025-05-21 16:59:45.747806] ✅ Acceso a la página principal
+[2025-05-21 16:59:46.320843] ✅ Última versión: v1.2.0
+[2025-05-21 17:00:21.370254] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 17:00:21.714507] 1. Nho89 - 23 contribuciones
+[2025-05-21 17:00:21.718094] 2. marie-adi - 18 contribuciones
+[2025-05-21 17:00:21.724215] ✅ Acceso a la página principal
+[2025-05-21 17:00:22.434513] ✅ Última versión: v1.2.0
+[2025-05-21 17:02:14.556208] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 17:02:14.892078] 1. Nho89 - 23 contribuciones
+[2025-05-21 17:02:14.895395] 2. marie-adi - 18 contribuciones
+[2025-05-21 17:02:14.900626] ✅ Acceso a la página principal
+[2025-05-21 17:02:15.718971] ✅ Última versión: v1.2.0
+[2025-05-21 17:02:25.929362] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-21 17:02:25.953767] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-21 17:02:26.385310] ✅ Los datos se han guardado correctamente
+[2025-05-21 17:04:19.754833] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 17:04:20.137412] 1. Nho89 - 23 contribuciones
+[2025-05-21 17:04:20.140106] 2. marie-adi - 18 contribuciones
+[2025-05-21 17:04:20.147410] ✅ Acceso a la página principal
+[2025-05-21 17:04:21.024282] ✅ Última versión: v1.2.0
+[2025-05-21 17:04:47.783473] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 17:04:48.088217] 1. Nho89 - 23 contribuciones
+[2025-05-21 17:04:48.091190] 2. marie-adi - 18 contribuciones
+[2025-05-21 17:04:48.096789] ✅ Acceso a la página principal
+[2025-05-21 17:04:48.767626] ✅ Última versión: v1.2.0
+[2025-05-21 17:05:03.091543] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 17:05:03.295838] 1. Nho89 - 23 contribuciones
+[2025-05-21 17:05:03.298556] 2. marie-adi - 18 contribuciones
+[2025-05-21 17:05:03.303710] ✅ Acceso a la página principal
+[2025-05-21 17:05:03.831580] ✅ Última versión: v1.2.0
+[2025-05-21 17:05:26.735519] ✅ Conexión a Supabase exitosa.
+[2025-05-21 17:05:36.752542] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 17:05:37.084116] 1. Nho89 - 23 contribuciones
+[2025-05-21 17:05:37.087070] 2. marie-adi - 18 contribuciones
+[2025-05-21 17:05:37.093403] ✅ Acceso a la página principal
+[2025-05-21 17:05:37.703122] ✅ Última versión: v1.2.0
+[2025-05-21 17:06:08.288891] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-21 17:06:08.472463] ❌ Error al obtener contribuidores: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-21 17:06:08.477110] ✅ Acceso a la página principal
+[2025-05-21 17:06:09.031246] ❌ GitHub API error.
+[2025-05-22 04:12:43.047926] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 04:12:45.514047] ✅ Última versión: v1.2.0
+[2025-05-22 04:17:26.678506] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 04:17:29.157458] ✅ Última versión: v1.2.0
+[2025-05-22 04:17:40.916737] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:17:41.282993] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:17:41.286154] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:17:41.292747] ✅ Acceso a la página principal
+[2025-05-22 04:20:07.910185] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:20:08.232246] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:20:08.234983] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:20:08.240754] ✅ Acceso a la página principal
+[2025-05-22 04:21:13.590578] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:21:13.935080] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:21:13.938097] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:21:13.943848] ✅ Acceso a la página principal
+[2025-05-22 04:24:24.018677] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:24:24.375401] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:24:24.378608] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:24:24.384060] ✅ Acceso a la página principal
+[2025-05-22 04:25:58.750012] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:25:59.139253] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:25:59.142028] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:25:59.146981] ✅ Acceso a la página principal
+[2025-05-22 04:28:47.074263] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:28:47.426829] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:28:47.429312] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:28:47.434207] ✅ Acceso a la página principal
+[2025-05-22 04:28:59.430394] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:28:59.657454] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:28:59.675766] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:28:59.698906] ✅ Acceso a la página principal
+[2025-05-22 04:29:18.520246] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 04:29:20.767382] ✅ Última versión: v1.2.0
+[2025-05-22 04:29:35.939296] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:29:36.290543] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:29:36.309092] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:29:36.334945] ✅ Acceso a la página principal
+[2025-05-22 04:36:43.660791] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:36:44.003549] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:36:44.020761] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:36:44.041768] ✅ Acceso a la página principal
+[2025-05-22 04:38:26.013284] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:38:26.625460] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:38:26.646928] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:38:26.671370] ✅ Acceso a la página principal
+[2025-05-22 04:38:37.740625] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:38:37.941222] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:38:37.959291] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:38:37.985087] ✅ Acceso a la página principal
+[2025-05-22 04:38:57.575283] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:38:57.808280] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:38:57.825049] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:38:57.849648] ✅ Acceso a la página principal
+[2025-05-22 04:40:01.360586] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:40:01.738059] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:40:01.757140] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:40:01.780306] ✅ Acceso a la página principal
+[2025-05-22 04:45:53.784973] ✅ Recibido datos {'age': 57.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 93.0, 'body_fat_percent': 28.703703703703702, 'diastolic': 123.0, 'systolic': 80.0, 'gripforce': 52.0, 'sit_and_bend_forward_cm': 22.0, 'sit_ups_counts': 50, 'broad_jump_cm': 170.0}
+[2025-05-22 04:45:53.822365] ✅ Prediction: {'prediction': 'D', 'probability': 0.7722606727298967}
+[2025-05-22 04:45:54.195640] ✅ Los datos se han guardado correctamente
+[2025-05-22 04:48:16.532286] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:48:16.877203] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:48:16.893864] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:48:16.915587] ✅ Acceso a la página principal
+[2025-05-22 04:49:40.345481] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:49:40.722165] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:49:40.739702] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:49:40.763125] ✅ Acceso a la página principal
+[2025-05-22 04:49:59.638272] ✅ Recibido datos {'age': 51.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 45, 'broad_jump_cm': 100.0}
+[2025-05-22 04:49:59.676517] ✅ Prediction: {'prediction': 'C', 'probability': 0.2607925683129983}
+[2025-05-22 04:50:00.235945] ✅ Los datos se han guardado correctamente
+[2025-05-22 04:56:26.223970] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:56:26.592124] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:56:26.609391] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:56:26.635337] ✅ Acceso a la página principal
+[2025-05-22 04:56:44.469402] ✅ Recibido datos {'age': 49.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-22 04:56:44.499934] ✅ Prediction: {'prediction': 'D', 'probability': 0.7045616287798626}
+[2025-05-22 04:56:44.882532] ✅ Los datos se han guardado correctamente
+[2025-05-22 04:56:56.693402] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:56:57.028709] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:56:57.048309] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:56:57.071374] ✅ Acceso a la página principal
+[2025-05-22 04:59:10.154994] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 04:59:12.396997] ✅ Última versión: v1.2.0
+[2025-05-22 04:59:16.526826] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 04:59:16.869593] 1. Nho89 - 23 contribuciones
+[2025-05-22 04:59:16.887487] 2. marie-adi - 18 contribuciones
+[2025-05-22 04:59:16.909907] ✅ Acceso a la página principal
+[2025-05-22 04:59:26.342945] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-22 04:59:26.380208] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-22 05:01:59.896453] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 05:02:00.244331] 1. Nho89 - 23 contribuciones
+[2025-05-22 05:02:00.262776] 2. marie-adi - 18 contribuciones
+[2025-05-22 05:02:00.284878] ✅ Acceso a la página principal
+[2025-05-22 05:02:07.190435] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-22 05:02:07.223272] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-22 05:02:29.387982] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 05:02:29.730367] 1. Nho89 - 23 contribuciones
+[2025-05-22 05:02:29.746166] 2. marie-adi - 18 contribuciones
+[2025-05-22 05:02:29.768558] ✅ Acceso a la página principal
+[2025-05-22 05:02:38.011726] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-22 05:02:38.042760] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-22 05:49:18.165223] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 05:49:18.848895] 1. Nho89 - 23 contribuciones
+[2025-05-22 05:49:18.866435] 2. marie-adi - 18 contribuciones
+[2025-05-22 05:49:18.890424] ✅ Acceso a la página principal
+[2025-05-22 05:57:15.371512] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 05:57:17.892551] ✅ Última versión: v1.2.0
+[2025-05-22 05:57:29.981145] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 05:57:30.345586] 1. Nho89 - 23 contribuciones
+[2025-05-22 05:57:30.368351] 2. marie-adi - 18 contribuciones
+[2025-05-22 05:57:30.394737] ✅ Acceso a la página principal
+[2025-05-22 05:57:40.564204] ✅ Recibido datos {'age': 25.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 80.0}
+[2025-05-22 05:57:40.596949] ✅ Prediction: {'prediction': 'D', 'probability': 0.5405072964622838}
+[2025-05-22 06:00:24.331480] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 06:00:24.668966] 1. Nho89 - 23 contribuciones
+[2025-05-22 06:00:24.688482] 2. marie-adi - 18 contribuciones
+[2025-05-22 06:00:24.710990] ✅ Acceso a la página principal
+[2025-05-22 06:04:49.151085] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 06:04:49.513021] 1. Nho89 - 23 contribuciones
+[2025-05-22 06:04:49.531944] 2. marie-adi - 18 contribuciones
+[2025-05-22 06:04:49.555104] ✅ Acceso a la página principal
+[2025-05-22 06:05] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 06:05] ✅ Última versión: v1.2.0
+[2025-05-22 07:42] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 07:42] ✅ Última versión: v1.2.0
+[2025-05-22 07:42] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 07:42] 1. Nho89 - 23 contribuciones
+[2025-05-22 07:42] 2. marie-adi - 18 contribuciones
+[2025-05-22 07:42] ✅ Acceso a la página principal
+[2025-05-22 07:43] ✅ Recibido datos {'age': 45.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 120.0, 'systolic': 80.0, 'gripforce': 30.0, 'sit_and_bend_forward_cm': 25.0, 'sit_ups_counts': 35, 'broad_jump_cm': 115.0}
+[2025-05-22 07:43] ✅ Prediction: {'prediction': 'D', 'probability': 0.5565949734124805}
+[2025-05-22 07:43] ✅ Los datos se han guardado correctamente
+[2025-05-22 07:46] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-22 07:46] 1. Nho89 - 23 contribuciones
+[2025-05-22 07:46] 2. marie-adi - 18 contribuciones
+[2025-05-22 07:46] ✅ Acceso a la página principal
+[2025-05-22 07:48] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 07:48] ✅ Última versión: v1.2.0
+[2025-05-22 07:56] 🏬 Conexión a Supabase exitosa.
+[2025-05-22 07:56] ✅ Última versión: v1.2.0

@@ -1,6 +1,6 @@
 class Settings:
     def __init__(self):
-        self.model = ""  # Model name
+        self.model = "GradientBoosting"  # Model name
         self.model_type = "MultiClass"  # Model type
         self.model_path_A = "model/model.pkl"
         self.class_map_path = "model/class_map.pkl"
