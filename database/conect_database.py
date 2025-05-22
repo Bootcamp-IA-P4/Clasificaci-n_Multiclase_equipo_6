@@ -15,9 +15,9 @@ class SupabaseConexion:
     def conect(self):
         try:
             self.client: Client = create_client(self.url, self.key)
-            print("✅ Conexión a Supabase exitosa.")
+            lw_log.write_log("🏬 Conexión a Supabase exitosa.")
         except Exception as e:
-            print(f"❌ Error al conectar con Supabase: {e}")
+            lw_log.write_log(f"❌ Error al conectar con Supabase: {e}")
             self.client = None
 
 conect = SupabaseConexion()
