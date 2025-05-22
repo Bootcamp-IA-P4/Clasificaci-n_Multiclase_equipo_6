@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/static/style.css">
     <meta name="description" content="{{ description }}" />
     <title>{{ title }}</title>
@@ -30,7 +31,8 @@
         <h1 class="display-4">{{ title }}</h1>
         <p class="lead">{{ description }}</p>
       </div>
-      <img
+      <div style="text-align: left;">
+        <img
           src="{{ url_for('static', path='img/test.jpg') }}"
           class="booton"
           title="Do physical test"
@@ -44,11 +46,13 @@
         />
       <a href="/docs" target="_black">
         <img
-            src="{{ url_for('static', path='img/api.jpg') }}"
+            src="{{ url_for('static', path='img/api.png') }}"
             class="booton"
             title="Api docs"
           />
         </a>
+      </div>
+      
       <dialog id="test_p" class="ali container mt-4">
         <img
           src="{{ url_for('static', path='img/boton.png') }}"
@@ -65,7 +69,7 @@
               <label class="form-label">Selecciona el género:</label><br />
               <div class="center">
                 <img
-                src="static/img/female.png"
+                src="static/img/F.png"
                 alt="Femenino"
                 class="gender-option"
                 id="gender-f"
@@ -73,7 +77,7 @@
                 title="Femenino"
                 />
                 <img
-                  src="static/img/male.png"
+                  src="static/img/M.png"
                   alt="Masculino"
                   class="gender-option"
                   id="gender-m"
@@ -214,7 +218,7 @@
             <fieldset >
               <h2 class="text-center">Quinto paso</h2>
             <div class="mb-3">
-              <label for="gripForce" class="form-label"
+              <label for="gripforce" class="form-label"
                 >Fuerza de agarre (kg) <span id="gripValue" class="badge bg-secondary"></span></label
               >
               <div class="contenedor">
@@ -229,8 +233,8 @@
               <input
                 type="range"
                 class="form-range"
-                name="gripForce"
-                id="gripForce"
+                name="gripforce"
+                id="gripforce"
                 min="10"
                 max="70"
                 value="40"
@@ -344,12 +348,14 @@
       <style>
         #tracer{
           width: 800px !important;
+          text-align: right;
         }
         #tracer pre{
          text-align: left;
          word-wrap: break-word;
           overflow-wrap: break-word; 
         }
+
         </style>
       <dialog id="tracer">
         <img
@@ -358,16 +364,122 @@
           title="Close window"
           onclick="window.tracer.close();"
         /> 
-        <pre>{{ load_logs }}</pre>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <button id="prev-day" class="btn btn-secondary btn-sm" title="Día anterior">&lt;</button>
+          <span id="current-date" style="font-weight: bold;"></span>
+          <button id="next-day" class="btn btn-secondary btn-sm" title="Día siguiente">&gt;</button>
+        </div>
+        <pre id="logs-content">Cargando logs...</pre>
+        <script>
+          // Utilidad para formatear fecha a YYYY-MM-DD
+          function formatDate(date) {
+        const yyyy = date.getFullYear();
+        const mm = String(date.getMonth() + 1).padStart(2, '0');
+        const dd = String(date.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+          }
+
+          let tracerCurrentDate = new Date();
+
+          function updateTracerLogs() {
+        const fecha = formatDate(tracerCurrentDate);
+        document.getElementById('current-date').textContent = fecha;
+        fetch(`${apipref}/logs?date=${fecha}`)
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('logs-content').innerHTML = data;
+          })
+          .catch(() => {
+            document.getElementById('logs-content').textContent = 'Error al cargar los logs.';
+          });
+          }
+
+          document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('tracer').addEventListener('show', function() {
+          tracerCurrentDate = new Date(); // reset to today on open
+          updateTracerLogs();
+        });
+
+        document.getElementById('prev-day').addEventListener('click', function() {
+          tracerCurrentDate.setDate(tracerCurrentDate.getDate() - 1);
+          updateTracerLogs();
+        });
+
+        document.getElementById('next-day').addEventListener('click', function() {
+          tracerCurrentDate.setDate(tracerCurrentDate.getDate() + 1);
+          updateTracerLogs();
+        });
+          });
+
+          // Para compatibilidad con showModal()
+          const tracerDialog = document.getElementById('tracer');
+          if (tracerDialog) {
+        const origShowModal = tracerDialog.showModal;
+        tracerDialog.showModal = function() {
+          const event = new Event('show');
+          tracerDialog.dispatchEvent(event);
+          origShowModal.call(tracerDialog);
+        };
+          }
+        </script>
       </dialog>
+      <style>
+        #result img{
+          text-align: center;
+        }
+        #result pre{
+          font-size: 8em;
+        }
+        #radarChart{
+          width: 333px !important;
+          height: 333px !important;
+        }
+      </style>
       <dialog id="predict">
         <img
           src="{{ url_for('static', path='img/boton.png') }}"
           class="booton"
           title="Close window"
-          onclick="window.predict.close();"
-        /> 
-        <div id="result"></div>
+          onclick="window.location.reload();"
+        />
+        <h3>Resultado del Análisis</h3>
+        <div style="display: flex; align-items: flex-start; gap: 32px;">
+          <div id="result" style="flex: 1;"></div>
+          <div style="flex: 1;">
+            <canvas id="radarChart"></canvas>
+          </div>
+          
+        </div>
+        <script>
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    let radarChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: [],
+        datasets: [{
+          label: "{{ title }}",
+          data: [],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgb(75, 192, 192)',
+          pointBackgroundColor: 'rgb(75, 192, 192)',
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          r: {
+            suggestedMin: 0,
+            suggestedMax: 100
+          }
+        }
+      }
+    });
+    </script>
       </dialog>
       <section class="section">
       <table id="myTable" class="display">
@@ -391,13 +503,19 @@
         {% for body in body_performance %}
         <tr>
           <td>{{ body["age"] }}</td>
-          <td>{{ body["gender"] }}</td>
+          <td>
+            <img src="static/img/{{ body["gender"] }}.png"
+                  class="gender-show"
+                  title="{{ body["gender"] }}"
+                />
+            
+          </td>
           <td>{{ body["height_cm"] }}</td>
           <td>{{ body["weight_kg"] }}</td>
-          <td>{{ body["body_fat_%"] }}</td>
+          <td>{{ body["body_fat_percent"] }}</td>
           <td>{{ body["diastolic"] }}</td>
           <td>{{ body["systolic"] }}</td>
-          <td>{{ body["gripForce"] }}</td>
+          <td>{{ body["gripforce"] }}</td>
           <td>{{ body["sit_and_bend_forward_cm"] }}</td>
           <td>{{ body["sit_ups_counts"] }}</td>
           <td>{{ body["broad_jump_cm"] }}</td>

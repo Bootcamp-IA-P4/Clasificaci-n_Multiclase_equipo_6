@@ -5,28 +5,32 @@ from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.templating import Jinja2Templates
 from datetime import datetime
 from core.config import settings
+from database.supabase_connection import save_fill_complete
 import core.lw_log as lw_log
 import github.data_github as github
-from model.utils import map_gender
+from database.conect_database import conect
+#from model.utils import map_gender
 import joblib
-from database.supabase_connection import save_fill_complete
 
 import pandas as pd
-from typing import Optional, List
+from fastapi import Query
+#from typing import Optional, List
 
-model = joblib.load("model/model.pkl")
-class_map = joblib.load("model/class_map.pkl")
+#from fastapi import status
+
+model = joblib.load(settings.model_path_A)
+class_map = joblib.load(settings.class_map_path)
 inv_class_map = {v: k for k, v in class_map.items()}
 
 # uvicorn main:app --reload
 
-
+VERSION=github.get_latest_github_tag()
 
 #Crear la app
 app = FastAPI(
     title=settings.proyect_name,
     description=settings.description,
-    version=settings.version
+    version=VERSION
     )
 print("\n🚀 Uvicorn escuchando en 0.0.0.0:8000 (dentro del contenedor)")
 print("🌐 Accede desde tu navegador en: http://127.0.0.1:8000\n")
@@ -42,22 +46,32 @@ templates = Jinja2Templates(directory="templates")
 async def read_root(request: Request):
     creators_str = ", ".join(settings.creators)
     year  = datetime.now().year
-    load_logs = lw_log.read_file_logs()
+
     github.get_repo_info()
     github.get_repo_contributors()
     lw_log.write_log(f"✅ Acceso a la página principal")
-    # Cargar los datos de prueba desde el archivo CSV
+    # Leer todos los registros de la tabla
+    #response = conect.client.table("body_performance").select("*").order("id", desc=False).execute()
+    response = conect.client.table("body_performance").select("*").execute()
+    # Redondear body_fat_percent a entero en cada registro
+    if response.data:
+        for row in response.data:
+            if "body_fat_percent" in row and row["body_fat_percent"] is not None:
+                row["body_fat_percent"] = int(round(row["body_fat_percent"]))
+    #print("Response:", response.data)
+    
+    # Cargar los datos 
     return templates.TemplateResponse(request,
         "index.html", 
         {
             "request": request, 
-            "title": settings.proyect_name + ", " + github.get_latest_github_tag(),
+            "title": settings.proyect_name + ", " + VERSION,
             "description": settings.description,
             "apipref": settings.api_prefix + settings.api_version,
             "creators": creators_str,
             "date": year,
-            "body_performance": settings.datos_prueba,
-            "load_logs": load_logs,
+            "body_performance": response.data,
+
         }
     )
 
@@ -72,7 +86,7 @@ async def predict(
                     body_fat: float = Form(...),
                     diastolic: float = Form(...),
                     systolic: float = Form(...),
-                    gripForce: float = Form(...),
+                    gripforce: float = Form(...),
                     sit_bend_cm: float = Form(...),
                     situps: int = Form(...),
                     broad_jump_cm: float = Form(...)
@@ -87,23 +101,32 @@ async def predict(
         "body_fat_percent": body_fat,
         "diastolic": diastolic,
         "systolic": systolic,
-        "gripforce": gripForce,
+        "gripforce": gripforce,
         "sit_and_bend_forward_cm": sit_bend_cm,
         "sit_ups_counts": situps,
         "broad_jump_cm": broad_jump_cm,
         }
         lw_log.write_log(f"✅ Recibido datos {input_data}")
+        # predicción
         df = pd.DataFrame([input_data])
         pred = model.predict(df)[0]
         proba = model.predict_proba(df).max()
         class_label = inv_class_map[pred]
-        save_fill_complete(input_data, class_label)
-        lw_log.write_log(f"✅ Predicción realizada: {class_label} con probabilidad {proba}")
-        result = {  
+        # resultados
+        result = {
                 "prediction": class_label,
                 "probability": float(proba)
             }
         print("Prediction result:", result)
-        return JSONResponse(result)
+        lw_log.write_log(f"✅ Prediction: {result}")
+        # Guardar en la base de datos
+        save_fill_complete(input_data, class_label)
+        return (result, input_data)
     except Exception as e:
         lw_log.write_log(f"💥Error al procesar los datos {input_data}")
+
+@app.get(settings.api_prefix+settings.api_version+"/logs")
+
+async def logs(request: Request, date: str = Query(None, description="Fecha en formato YYYY-MM-DD")):
+    logs = lw_log.read_file_logs(date) if date else lw_log.read_file_logs()
+    return logs.strip('"')

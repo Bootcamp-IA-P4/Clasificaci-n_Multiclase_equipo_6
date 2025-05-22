@@ -9,13 +9,12 @@ services:
     container_name: BODY_PERFORMANCE
 
 
-#  test:
-#    build: .
-#    container_name: Coches_Regresion_ML-TEST
-#    environment:
-#      - LOG_FILE=/log.txt
-#      - PYTHONPATH=/app/regression  # Agregar la ruta del código fuente
-#    volumes:
-#      - .:/app
-#    command: pytest regression/tests
+  test:
+    build: .
+    container_name: BODY_PERFORMANCE_test
+    environment:
+      - PYTHONPATH=/app  # Agregar la ruta del código fuente
+    volumes:
+      - .:/app
+    command: pytest tests
     

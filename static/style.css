@@ -124,3 +124,9 @@ fieldset .next{
     display: block;
     margin-top: 10px;
   }
+.gender-show{
+  height: 40px;
+}
+#predict{
+  text-align: right;
+}
