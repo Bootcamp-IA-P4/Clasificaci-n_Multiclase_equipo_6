@@ -32,7 +32,7 @@ def save_fill_complete(features: dict, predict):
             "systolic": features.get("systolic"),
             "gripforce": features.get("gripforce"),
             "sit_and_bend_forward_cm": features.get("sit_and_bend_forward_cm"),
-            "sit-ups_counts": features.get("sit-ups_counts"),
+            "sit_ups_counts": features.get("sit_ups_counts"),
             "broad_jump_cm": features.get("broad_jump_cm"),
             "class": predict,
         }
