@@ -11,6 +11,7 @@ import github.data_github as github
 from database.conect_database import conect
 #from model.utils import map_gender
 import joblib
+import a_b_testing.model_b as model_b
 
 import pandas as pd
 from fastapi import Query
@@ -24,7 +25,10 @@ inv_class_map = {v: k for k, v in class_map.items()}
 
 # uvicorn main:app --reload
 
-VERSION=github.get_latest_github_tag()
+# VERSION=github.get_latest_github_tag()
+VERSION = settings.version
+
+model_b.load_data()
 
 #Crear la app
 app = FastAPI(
