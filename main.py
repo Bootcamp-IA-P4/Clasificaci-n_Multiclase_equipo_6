@@ -15,7 +15,7 @@ import joblib
 import a_b_testing.model_b as model_a_b
 import random
 from contextlib import asynccontextmanager
-
+import  asyncio
 import pandas as pd
 from fastapi import Query
 #from typing import Optional, List
@@ -31,13 +31,22 @@ inv_class_map = {v: k for k, v in class_map.items()}
 
 VERSION=github.get_latest_github_tag()
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    model_a_b.load_data()
+    def sync_load():
+        try:
+            model_a_b.load_data()
+            lw_log.write_log("✅ Datos para A/B testing cargados en segundo plano.")
+        except Exception as e:
+            lw_log.write_log(f"💥 Error al cargar datos A/B: {e}")
+
+    asyncio.get_event_loop().run_in_executor(None, sync_load)
     yield
 
 #Crear la app
 app = FastAPI(
+    lifespan=lifespan,
     title=settings.proyect_name,
     description=settings.description,
     version=VERSION
@@ -50,6 +59,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 #Configurar Jinja2 para las plantillas HTML
 templates = Jinja2Templates(directory="templates")
 
+# Cargar archivos de a/b testing
 
 # Ruta principal - Renderiza el formulario HTML
 @app.get("/", response_class=HTMLResponse)

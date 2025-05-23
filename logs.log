@@ -571,3 +571,189 @@
 [2025-05-23 17:25] 1. Nho89 - 23 contribuciones
 [2025-05-23 17:25] 2. marie-adi - 18 contribuciones
 [2025-05-23 17:25] ✅ Acceso a la página principal
+[2025-05-23 17:40] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:40] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:40] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:40] ✅ Acceso a la página principal
+[2025-05-23 15:42] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 15:42] ✅ Última versión: v1.5.2
+[2025-05-23 15:42] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:42] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:42] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:42] ✅ Acceso a la página principal
+[2025-05-23 15:42] ⚠️ No hay datos de genero o edad.
+[2025-05-23 15:42] ✅ Recibido datos {'age': 32.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 81.0, 'body_fat_percent': 25.0, 'diastolic': 80.0, 'systolic': 120.0, 'gripforce': 50.0, 'sit_and_bend_forward_cm': 31.0, 'sit_ups_counts': 45, 'broad_jump_cm': 139.0}
+[2025-05-23 15:42] ✅ Modelo seleccionado: B
+[2025-05-23 15:42] ✅ Prediction: {'prediction': 'C', 'probability': 0.35628091295756886}
+[2025-05-23 15:42] ✅ Los datos se han guardado correctamente
+[2025-05-23 15:42] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:43] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:43] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:43] ✅ Acceso a la página principal
+[2025-05-23 15:49] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 15:49] ✅ Última versión: v1.5.2
+[2025-05-23 15:50] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:50] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:50] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:50] ✅ Acceso a la página principal
+[2025-05-23 15:50] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 15:50] ✅ Última versión: v1.5.2
+[2025-05-23 15:51] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:51] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:51] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:51] ✅ Acceso a la página principal
+[2025-05-23 17:52] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 17:52] ✅ Última versión: v1.5.2
+[2025-05-23 17:52] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:52] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:52] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:52] ✅ Acceso a la página principal
+[2025-05-23 17:53] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 17:53] ✅ Última versión: v1.5.2
+[2025-05-23 17:53] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:53] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:53] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:53] ✅ Acceso a la página principal
+[2025-05-23 17:55] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 17:55] ✅ Última versión: v1.5.2
+[2025-05-23 17:55] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:55] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:55] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:55] ✅ Acceso a la página principal
+[2025-05-23 17:56] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:56] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:56] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:56] ✅ Acceso a la página principal
+[2025-05-23 17:58] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 17:58] ✅ Última versión: v1.5.2
+[2025-05-23 17:58] ✅ Datos para A/B testing inicializados correctamente al iniciar la aplicación.
+[2025-05-23 17:59] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:59] ❌ Error al obtener contribuidores: 403 - {"message":"API rate limit exceeded for 80.29.160.148. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+[2025-05-23 17:59] ✅ Acceso a la página principal
+[2025-05-23 18:00] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 18:00] ✅ Última versión: v1.5.2
+[2025-05-23 18:00] ✅ Datos para A/B testing inicializados correctamente al iniciar la aplicación.
+[2025-05-23 18:02] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 18:02] ✅ Última versión: v1.5.2
+[2025-05-23 18:02] ✅ Iniciando A/B test)
+[2025-05-23 18:03] ✅ Datos para A/B testing inicializados correctamente al iniciar la aplicación.
+[2025-05-23 18:04] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 18:04] ✅ Última versión: v1.5.2
+[2025-05-23 18:04] ✅ Iniciando A/B test)
+[2025-05-23 18:09] 🤖 F1 modelo A: 0.7169
+[2025-05-23 18:09] 🤖 F1 modelo B: 0.6908
+[2025-05-23 18:09] ❌ No hay mejora suficiente. Se mantiene el modelo A.
+[2025-05-23 18:09] ✅ Datos para A/B testing cargados en segundo plano.
+[2025-05-23 18:10] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 18:10] ✅ Última versión: v1.5.2
+[2025-05-23 18:10] ✅ Datos para A/B testing inicializados correctamente (en segundo hilo).
+[2025-05-23 18:17] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 18:17] ✅ Última versión: v1.5.2
+[2025-05-23 18:17] ✅ Iniciando A/B test)
+[2025-05-23 18:17] ✅ Datos para A/B testing inicializados correctamente (en segundo hilo).
+[2025-05-23 16:19] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 16:19] ✅ Última versión: v1.5.2
+[2025-05-23 16:19] ✅ Iniciando A/B test)
+[2025-05-23 16:24] 🤖 F1 modelo A: 0.7169
+[2025-05-23 16:24] 🤖 F1 modelo B: 0.6908
+[2025-05-23 16:24] ❌ No hay mejora suficiente. Se mantiene el modelo A.
+[2025-05-23 16:24] ✅ Datos para A/B testing inicializados correctamente (en segundo hilo).
+[2025-05-23 16:27] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 16:27] 1. Nho89 - 23 contribuciones
+[2025-05-23 16:27] 2. marie-adi - 18 contribuciones
+[2025-05-23 16:27] ✅ Acceso a la página principal
+[2025-05-23 16:27] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 16:27] ✅ Última versión: v1.5.2
+[2025-05-23 16:27] ✅ Iniciando A/B test)
+[2025-05-23 16:30] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 16:30] 1. Nho89 - 23 contribuciones
+[2025-05-23 16:30] 2. marie-adi - 18 contribuciones
+[2025-05-23 16:30] ✅ Acceso a la página principal
+[2025-05-23 16:33] 🤖 F1 modelo A: 0.7169
+[2025-05-23 16:33] 🤖 F1 modelo B: 0.6908
+[2025-05-23 16:33] ❌ No hay mejora suficiente. Se mantiene el modelo A.
+[2025-05-23 16:33] ✅ Datos para A/B testing cargados en segundo plano.
+[2025-05-23 16:37] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 16:37] ✅ Última versión: v1.5.2
+[2025-05-23 16:37] ✅ Iniciando A/B test)
+[2025-05-23 16:37] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 16:37] 1. Nho89 - 23 contribuciones
+[2025-05-23 16:37] 2. marie-adi - 18 contribuciones
+[2025-05-23 16:37] ✅ Acceso a la página principal
+[2025-05-23 16:38] ⚠️ No hay datos de genero o edad.
+[2025-05-23 16:38] ✅ Recibido datos {'age': 22.0, 'gender': 'F', 'height_cm': 172.0, 'weight_kg': 57.0, 'body_fat_percent': 19.2671714440238, 'diastolic': 80.0, 'systolic': 120.0, 'gripforce': 33.0, 'sit_and_bend_forward_cm': 31.0, 'sit_ups_counts': 48, 'broad_jump_cm': 147.0}
+[2025-05-23 16:38] ✅ Modelo seleccionado: A
+[2025-05-23 16:38] ✅ Prediction: {'prediction': 'A', 'probability': 0.5869673693700747}
+[2025-05-23 16:38] ✅ Los datos se han guardado correctamente
+[2025-05-23 16:38] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 16:38] 1. Nho89 - 23 contribuciones
+[2025-05-23 16:38] 2. marie-adi - 18 contribuciones
+[2025-05-23 16:38] ✅ Acceso a la página principal
+[2025-05-23 18:53] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 18:54] ✅ Última versión: v1.5.2
+[2025-05-23 18:54] ✅ Iniciando A/B test)
+[2025-05-23 18:54] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 18:54] 1. Nho89 - 23 contribuciones
+[2025-05-23 18:54] 2. marie-adi - 18 contribuciones
+[2025-05-23 18:54] ✅ Acceso a la página principal
+[2025-05-23 18:59] ✅ Datos para A/B testing cargados en segundo plano.
+[2025-05-23 17:01] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 17:01] ✅ Última versión: v1.5.2
+[2025-05-23 17:01] ✅ Iniciando A/B test)
+[2025-05-23 17:02] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:02] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:02] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:02] ✅ Acceso a la página principal
+[2025-05-23 17:03] ✅ Medias:
+ (np.float64(33.0), np.float64(31.0), np.float64(48.0), np.float64(147.0))
+[2025-05-23 17:03] ✅ Recibido datos {'age': 22.0, 'gender': 'F', 'height_cm': 170.0, 'weight_kg': 61.0, 'body_fat_percent': 21.107266435986162, 'diastolic': 80.0, 'systolic': 120.0, 'gripforce': 35.0, 'sit_and_bend_forward_cm': 22.0, 'sit_ups_counts': 64, 'broad_jump_cm': 141.0}
+[2025-05-23 17:03] ✅ Modelo seleccionado: B
+[2025-05-23 17:03] ✅ Prediction: {'prediction': 'A', 'probability': 0.5636080875136915}
+[2025-05-23 17:03] ✅ Los datos se han guardado correctamente
+[2025-05-23 17:03] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:03] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:03] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:03] ✅ Acceso a la página principal
+[2025-05-23 17:17] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 17:17] ✅ Última versión: v1.5.2
+[2025-05-23 17:17] ✅ Iniciando A/B test)
+[2025-05-23 17:17] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:17] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:17] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:17] ✅ Acceso a la página principal
+[2025-05-23 17:18] ✅ Medias:
+ (np.float64(34.0), np.float64(26.5), np.float64(56.0), np.float64(144.0))
+[2025-05-23 17:18] ✅ Recibido datos {'age': 22.0, 'gender': 'F', 'height_cm': 180.0, 'weight_kg': 70.0, 'body_fat_percent': 21.604938271604937, 'diastolic': 80.0, 'systolic': 120.0, 'gripforce': 34.0, 'sit_and_bend_forward_cm': 22.0, 'sit_ups_counts': 44, 'broad_jump_cm': 157.0}
+[2025-05-23 17:18] ✅ Modelo seleccionado: B
+[2025-05-23 17:18] ✅ Prediction: {'prediction': 'C', 'probability': 0.3767081378289086}
+[2025-05-23 17:18] ✅ Los datos se han guardado correctamente
+[2025-05-23 17:18] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:18] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:18] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:18] ✅ Acceso a la página principal
+[2025-05-23 17:24] 🤖 F1 modelo A: 0.7188
+[2025-05-23 17:24] 🤖 F1 modelo B: 0.6927
+[2025-05-23 17:24] ❌ No hay mejora suficiente. Se mantiene el modelo A.
+[2025-05-23 17:24] ✅ Datos para A/B testing cargados en segundo plano.
+[2025-05-23 17:26] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 17:26] ✅ Última versión: v1.5.2
+[2025-05-23 17:26] ✅ Iniciando A/B test)
+[2025-05-23 17:26] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:26] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:26] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:26] ✅ Acceso a la página principal
+[2025-05-23 17:27] ✅ Medias:
+ (np.float64(50.0), np.float64(31.0), np.float64(45.0), np.float64(139.0))
+[2025-05-23 17:27] ✅ Recibido datos {'age': 32.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 82.0, 'body_fat_percent': 25.30864197530864, 'diastolic': 82.0, 'systolic': 118.0, 'gripforce': 50.0, 'sit_and_bend_forward_cm': 30.0, 'sit_ups_counts': 93, 'broad_jump_cm': 179.0}
+[2025-05-23 17:27] ✅ Modelo seleccionado: B
+[2025-05-23 17:27] ✅ Prediction: {'prediction': 'A', 'probability': 0.48778018728261885}
+[2025-05-23 17:27] ✅ Los datos se han guardado correctamente
+[2025-05-23 17:27] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:27] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:27] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:27] ✅ Acceso a la página principal
+[2025-05-23 17:33] 🤖 F1 modelo A: 0.7176
+[2025-05-23 17:33] 🤖 F1 modelo B: 0.6963
+[2025-05-23 17:33] ❌ No hay mejora suficiente. Se mantiene el modelo A.
+[2025-05-23 17:33] ✅ Datos para A/B testing cargados en segundo plano.

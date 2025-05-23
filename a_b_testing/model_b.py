@@ -23,7 +23,8 @@ from database.conect_database import conect
 # Initialize Supabase client
 
 # Load data of SQL
-async def load_data(number_itera=2):
+def load_data(number_itera=2):
+    lw_log.write_log(f"✅ Iniciando A/B test)")
     response = conect.client.table("body_performance")\
                 .select("*", count="exact")\
                 .order("id", desc=True)\
