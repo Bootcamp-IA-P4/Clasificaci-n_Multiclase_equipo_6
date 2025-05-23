@@ -13,10 +13,45 @@
   <link rel="stylesheet" href="/static/style.css">
   <meta name="description" content="{{ description }}" />
   <title>{{ title }}</title>
+
 </head>
 <style>
 
 </style>
+  <body>
+    <div class="container bg-white rounded shadow p-4"></div>
+    <section class="bg-light text-center py-1 padding">
+      <div class="container">
+        <h1 class="display-4">{{ title }}</h1>
+        <p class="lead">{{ description }}</p>
+      </div>
+      <p class="lead_left">{{ slogan }}</p>
+      <img src="{{ url_for('static', path='img/test.jpg') }}" class="buttom_test_form" title="Do physical test"
+        onclick="window.test_p.showModal();" />
+      <div style="text-align: left;">
+      <img
+          src="{{ url_for('static', path='img/info.png') }}"
+          class="booton"
+          title="Tracer"
+          onclick="window.tracer.showModal();"
+        />
+      <a href="/docs" target="_black">
+        <img
+            src="{{ url_for('static', path='img/api.png') }}"
+            class="booton"
+            title="Api docs"
+          />
+        </a>
+      </div>
+      
+      <dialog id="test_p" class="ali container mt-4">
+        <img
+          src="{{ url_for('static', path='img/boton.png') }}"
+          class="booton"
+          title="Close window"
+          onclick="window.test_p.close();"
+        />  
+        <div class="">
 
 <body>
   <section class="bg-light text-center py-1 padding">

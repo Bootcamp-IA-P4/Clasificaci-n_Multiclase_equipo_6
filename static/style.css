@@ -135,53 +135,33 @@
       text-align: center;
     }
 
-    .step {
-      display: none;
-    }
-
-    #step1:checked~.form-step1,
-    #step2:checked~.form-step2,
-    #step3:checked~.form-step3 {
-      display: block;
-    }
-
-    .hidden-radio {
-      display: none;
-    }
-
-    button {
-      display: block;
-      margin-top: 10px;
-    }
-
-    .gender-show {
-      height: 40px;
-    }
-
-    #predict {
-      text-align: right;
-    }
-
-    #tracer {
-      width: 800px !important;
-      text-align: right;
-    }
-
-    #tracer pre {
-      text-align: left;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    #result img {
-      text-align: center;
-    }
-
-    #result pre {
-      font-size: 8em;
-    }
-
-    #radarChart {
-      width: 333px !important;
-      height: 333px !important;
-    }
+  button {
+    display: block;
+    margin-top: 10px;
+  }
+.gender-show{
+  height: 20px;
+}
+#predict{
+  text-align: right;
+}
+.buttom_test_form{
+  cursor: pointer;
+  height: 50px;
+}
+.lead_left{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2E8B57;
+  font-weight: 80;
+}
+.display-4{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #001f3f;
+  font-weight: 100;
+}
+.lead{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #001f3f;
+  font-weight: 80;
+}

@@ -67,6 +67,7 @@ async def read_root(request: Request):
             "request": request, 
             "title": settings.proyect_name + ", " + VERSION,
             "description": settings.description,
+            "slogan": settings.slogan,
             "apipref": settings.api_prefix + settings.api_version,
             "creators": creators_str,
             "date": year,
@@ -119,6 +120,8 @@ async def predict(
                 "prediction": class_label,
                 "probability": float(proba)
             }
+        # proba = model.predict_proba(df)
+        # print("Probabilidades por clase:", proba[0])
         print("Prediction result:", result)
         lw_log.write_log(f"✅ Prediction: {result}")
         # Guardar en la base de datos
@@ -133,3 +136,5 @@ async def predict(
 async def logs(request: Request, date: str = Query(None, description="Fecha en formato YYYY-MM-DD")):
     logs = lw_log.read_file_logs(date) if date else lw_log.read_file_logs()
     return logs.strip('"')
+
+
