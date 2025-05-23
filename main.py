@@ -12,6 +12,9 @@ import avg_chart.chart as chart
 from database.conect_database import conect
 #from model.utils import map_gender
 import joblib
+import a_b_testing.model_b as model_a_b
+import random
+from contextlib import asynccontextmanager
 
 import pandas as pd
 from fastapi import Query
@@ -19,13 +22,19 @@ from fastapi import Query
 
 #from fastapi import status
 
-model = joblib.load(settings.model_path_A)
+model_a = joblib.load(settings.model_path_A)
+model_b = joblib.load(settings.model_path_B)
 class_map = joblib.load(settings.class_map_path)
 inv_class_map = {v: k for k, v in class_map.items()}
 
 # uvicorn main:app --reload
 
-VERSION=github.get_latest_github_tag()
+# VERSION=github.get_latest_github_tag()
+VERSION = settings.version
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    model_a_b.load_data()
+    yield
 
 #Crear la app
 app = FastAPI(
@@ -110,6 +119,10 @@ async def predict(
         chart_avg = chart.get_data(gender, age)
         print("Media de salto:", chart_avg)
         lw_log.write_log(f"✅ Recibido datos {input_data}")
+        rmd = random.random()
+        ver = "A" if rmd < 0.5 else "B"
+        model = model_a if ver == "A" else model_b
+        lw_log.write_log(f"✅ Modelo seleccionado: {ver}")
         # predicción
         df = pd.DataFrame([input_data])
         pred = model.predict(df)[0]
