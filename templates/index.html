@@ -26,18 +26,17 @@
 
 </style>
   <body>
+    <div class="container bg-white rounded shadow p-4"></div>
     <section class="bg-light text-center py-1 padding">
       <div class="container">
-        <h1 class="display-4">{{ title }}</h1>
-        <p class="lead">{{ description }}</p>
+        <h1 class="display-4">Rendimiento Corporal</h1>
+        <p class="lead">¿Estás preparándote para una oposición física? ¿Entrenas en un gimnasio o simplemente te interesa conocer tu rendimiento
+        corporal?</p>
       </div>
+      <p class="lead_left">Pulsa en el siguiente botón y clasifica tu rendimiento físico:</p>
+      <img src="{{ url_for('static', path='img/test.jpg') }}" class="buttom_test_form" title="Do physical test"
+        onclick="window.test_p.showModal();" />
       <div style="text-align: left;">
-        <img
-          src="{{ url_for('static', path='img/test.jpg') }}"
-          class="booton"
-          title="Do physical test"
-          onclick="window.test_p.showModal();"
-        />
       <img
           src="{{ url_for('static', path='img/info.png') }}"
           class="booton"

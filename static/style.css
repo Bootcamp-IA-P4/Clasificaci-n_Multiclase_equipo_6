@@ -130,3 +130,10 @@ fieldset .next{
 #predict{
   text-align: right;
 }
+.buttom_test_form{
+  cursor: pointer;
+  height: 50px;
+}
+.lead_left{
+  text-align: left;
+}
