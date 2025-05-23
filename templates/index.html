@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/static/style.css">
     <meta name="description" content="{{ description }}" />
     <title>{{ title }}</title>
+
   </head>
 <style>
 
@@ -29,11 +30,10 @@
     <div class="container bg-white rounded shadow p-4"></div>
     <section class="bg-light text-center py-1 padding">
       <div class="container">
-        <h1 class="display-4">Rendimiento Corporal</h1>
-        <p class="lead">¿Estás preparándote para una oposición física? ¿Entrenas en un gimnasio o simplemente te interesa conocer tu rendimiento
-        corporal?</p>
+        <h1 class="display-4">{{ title }}</h1>
+        <p class="lead">{{ description }}</p>
       </div>
-      <p class="lead_left">Pulsa en el siguiente botón y clasifica tu rendimiento físico:</p>
+      <p class="lead_left">{{ slogan }}</p>
       <img src="{{ url_for('static', path='img/test.jpg') }}" class="buttom_test_form" title="Do physical test"
         onclick="window.test_p.showModal();" />
       <div style="text-align: left;">

@@ -67,6 +67,7 @@ async def read_root(request: Request):
             "request": request, 
             "title": settings.proyect_name + ", " + VERSION,
             "description": settings.description,
+            "slogan": settings.slogan,
             "apipref": settings.api_prefix + settings.api_version,
             "creators": creators_str,
             "date": year,
