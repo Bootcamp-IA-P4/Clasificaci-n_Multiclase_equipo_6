@@ -4,7 +4,9 @@ class Settings:
         self.model_type = "MultiClass"  # Model type
         self.model_path_A = "model/model.pkl"
         self.class_map_path = "model/class_map.pkl"
+        self.gender_map_path = "model/gender_map.pkl"
         self.proyect_name = "My body performance"
+        self.csv_clean_path = "data/clean_data.csv"
         self.repository = "https://api.github.com/repos/Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6"
         self.version = "1.0.0"
         self.description = "Assessment of body performance in the sports context"
