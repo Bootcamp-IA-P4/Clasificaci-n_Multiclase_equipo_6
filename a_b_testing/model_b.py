@@ -23,7 +23,7 @@ from database.conect_database import conect
 # Initialize Supabase client
 
 # Load data of SQL
-def load_data(number_itera=2):
+async def load_data(number_itera=2):
     response = conect.client.table("body_performance")\
                 .select("*", count="exact")\
                 .order("id", desc=True)\
@@ -38,37 +38,6 @@ def load_data(number_itera=2):
 
     save_concat(df_last)
 
-    # Create CSV file
-    # if number_itera > 1:
-    #     df = pd.read_csv(settings.test_data_logs)
-    #     # Obtener la última fila de la columna 'nombre_columna'
-    #     last_file = df['id'].iloc[-1]-10
-    #     # Leer todos los registros de la tabla
-    #     response = supabase.table("body_performance")\
-    #             .select("*", count="exact")\
-    #             .gt("id", desc=True)\
-    #             .execute()
-    #     # Verificamos si hay datos nuevos segun el numero de iteraciones que queremos
-    #     if  response.count >= number_itera:
-    #         print("Se han encontrado datos nuevos en la tabla.")
-    #         try:
-    #             data_filtrada = [
-    #                 {k: v for k, v in row.items() if k not in ("created_at")}
-    #                 for row in response.data
-    #                 ]
-                
-    #             df = pd.DataFrame(data_filtrada)
-    #             # quitar duplicados
-    #             df.drop_duplicates(subset=['URL'], inplace=True)
-    #             df.to_csv(settings.test_data_logs, index=False)
-    #             save_concat()
-    #         except Exception as e:
-    #             print("Error al guardar los datos en CSV:", e)
-    #     else    :
-    #         print("No se encontraron datos suficientes según el número de iteraciones: ", number_itera)
-    #         print("Contados en la tabla: ", response.count)    
-    # else:
-    #     print("No se encontraron datos... ")
 
 # Concat CSV and save
 def save_concat(clean_df):
@@ -146,11 +115,11 @@ def model_b():
         # best_gb = random_search.best_estimator_
 
         # Matriz de confusión
-        print("Matriz de confusión:\n")
-        y_pred = random_search.predict(XTest)
-        print(confusion_matrix(yTest, y_pred))
+        # print("Matriz de confusión:\n")
+        # y_pred = random_search.predict(XTest)
+        # print(confusion_matrix(yTest, y_pred))
         # # Reporte de clasificación
-        print(classification_report(yTest, y_pred))
+        # print(classification_report(yTest, y_pred))
         #validate(y_test, y_pred, y_train, X_train, clf)
         # Guardar el modelo
         joblib.dump(random_search.best_estimator_, settings.model_path_B)
@@ -161,24 +130,6 @@ def model_b():
     except Exception as e:
             print("Error al combinar los archivos:", e)
 
-# Reemplazar el modelo A por el B si hay mejora
-# def validate(y_test, y_pred, y_train, X_train, gb):
-    
-#     # Validación de Overfitting
-#     y_train_pred = gb.predict(X_train)
-
-#     acc_train = accuracy_score(y_train, y_train_pred)
-#     acc_test = accuracy_score(y_test, y_pred)
-#     diff = abs(acc_train - acc_test)
-
-#     print(f"\nAccuracy en entrenamiento: {acc_train:.4f}")
-#     print(f"Accuracy en test:          {acc_test:.4f}")
-#     print(f"Diferencia absoluta:       {diff:.4f}")
-
-#     if diff > 0.05:
-#         print(f"⚠️  El modelo presenta sobreajuste > 5%", diff)
-#     else:
-#         print(f"✅  No hay sobreajuste significativo (≤ 5%)", diff)
 
 def comparar_y_reemplazar_modelo(X_val, y_val, path_a, path_b, umbral_mejora=0.10):
     # Cargar modelos

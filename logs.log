@@ -542,3 +542,36 @@
 [2025-05-23 14:17] F1 modelo B: 0.6865
 [2025-05-23 14:17] ❌ No hay mejora suficiente. Se mantiene el modelo A.
 [2025-05-23 14:19] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 14:29] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 14:31] 🤖 F1 modelo A: 0.8103
+[2025-05-23 14:31] 🤖 F1 modelo B: 0.6865
+[2025-05-23 14:31] ❌ No hay mejora suficiente. Se mantiene el modelo A.
+[2025-05-23 14:32] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 14:32] 1. Nho89 - 23 contribuciones
+[2025-05-23 14:32] 2. marie-adi - 18 contribuciones
+[2025-05-23 14:32] ✅ Acceso a la página principal
+[2025-05-23 14:32] ✅ Recibido datos {'age': 33.0, 'gender': 'M', 'height_cm': 190.0, 'weight_kg': 92.0, 'body_fat_percent': 25.48476454293629, 'diastolic': 75.0, 'systolic': 104.0, 'gripforce': 53.0, 'sit_and_bend_forward_cm': 24.0, 'sit_ups_counts': 53, 'broad_jump_cm': 175.0}
+[2025-05-23 14:32] ✅ Modelo seleccionado: B
+[2025-05-23 14:32] ✅ Prediction: {'prediction': 'D', 'probability': 0.43636151801503154}
+[2025-05-23 14:32] ✅ Los datos se han guardado correctamente
+[2025-05-23 14:32] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 14:32] 1. Nho89 - 23 contribuciones
+[2025-05-23 14:32] 2. marie-adi - 18 contribuciones
+[2025-05-23 14:32] ✅ Acceso a la página principal
+[2025-05-23 14:32] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 14:32] 1. Nho89 - 23 contribuciones
+[2025-05-23 14:32] 2. marie-adi - 18 contribuciones
+[2025-05-23 14:32] ✅ Acceso a la página principal
+[2025-05-23 14:32] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 14:32] 1. Nho89 - 23 contribuciones
+[2025-05-23 14:32] 2. marie-adi - 18 contribuciones
+[2025-05-23 14:32] ✅ Acceso a la página principal
+[2025-05-23 14:32] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 14:32] 1. Nho89 - 23 contribuciones
+[2025-05-23 14:32] 2. marie-adi - 18 contribuciones
+[2025-05-23 14:32] ✅ Acceso a la página principal
+[2025-05-23 14:40] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 14:40] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 14:40] 1. Nho89 - 23 contribuciones
+[2025-05-23 14:40] 2. marie-adi - 18 contribuciones
+[2025-05-23 14:40] ✅ Acceso a la página principal
