@@ -34,12 +34,12 @@ gb = GradientBoostingClassifier(random_state=42, n_iter_no_change=5, validation_
 
 param_dist = {
     'model__n_estimators': [200, 250, 300],
-    'model__learning_rate': [0.005, 0.01, 0.03],  # puedes probar valores más bajos y medios
-    'model__max_depth': [2, 3],                   # 3 o 4 profundidades
-    'model__min_samples_leaf': [3, 5, 7],         # hojas con mínimo de 3 a 7 muestras
-    'model__min_samples_split': [5, 10, 15],      # splits más restrictivos
-    'model__subsample': [0.6, 0.7, 0.75, 0.8, 0.9],          # porcentaje de muestras usadas en cada árbol
-    'model__max_features': ['sqrt', 'log2'] # features considerados en cada split
+    'model__learning_rate': [0.005, 0.01, 0.03],  
+    'model__max_depth': [2, 3],                   
+    'model__min_samples_leaf': [3, 5, 7],         
+    'model__min_samples_split': [5, 10, 15],      
+    'model__subsample': [0.6, 0.7, 0.75, 0.8, 0.9],          
+    'model__max_features': ['sqrt', 'log2'] 
 }
 
 pipeline = Pipeline([
@@ -55,7 +55,7 @@ random_search = RandomizedSearchCV(
     cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
     verbose=1,
     random_state=42,
-    n_jobs=-1, # Si no mejora tras 5 iteraciones, se para
+    n_jobs=-1, 
 )
 
 
@@ -109,7 +109,7 @@ overfitting_percent = ((train_acc - test_acc) / train_acc) * 100
 
 print(f"\n📊 Porcentaje de overfitting: {overfitting_percent:.2f}%")
 
-# Reglas automáticas para evaluar el modelo
+
 if overfitting_percent < 3 and test_acc >= 0.80:
     print("✅ Configuración óptima: precisión alta sin overfitting.")
 elif overfitting_percent < 5:
