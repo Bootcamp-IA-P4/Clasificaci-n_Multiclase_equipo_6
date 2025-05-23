@@ -471,3 +471,103 @@
 [2025-05-23 14:59] 2. marie-adi - 18 contribuciones
 [2025-05-23 14:59] ✅ Acceso a la página principal
 >>>>>>> feature/model
+[2025-05-23 15:22] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 15:24] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:24] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:24] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:24] ✅ Acceso a la página principal
+[2025-05-23 15:27] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:27] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:27] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:27] ✅ Acceso a la página principal
+[2025-05-23 15:28] ✅ Medias:
+ (np.float64(46.2), np.float64(20.4), np.float64(44.8), np.float64(127.2))
+[2025-05-23 15:28] ✅ Recibido datos {'age': 25.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 75.0, 'body_fat_percent': 23.148148148148145, 'diastolic': 80.0, 'systolic': 120.0, 'gripforce': 45.0, 'sit_and_bend_forward_cm': 20.0, 'sit_ups_counts': 98, 'broad_jump_cm': 133.0}
+[2025-05-23 15:28] ✅ Modelo seleccionado: B
+[2025-05-23 15:28] ✅ Prediction: {'prediction': 'C', 'probability': 0.355420625463036}
+[2025-05-23 15:28] ✅ Los datos se han guardado correctamente
+[2025-05-23 15:30] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:30] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:30] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:30] ✅ Acceso a la página principal
+[2025-05-23 15:31] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 15:32] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 15:32] 1. Nho89 - 23 contribuciones
+[2025-05-23 15:32] 2. marie-adi - 18 contribuciones
+[2025-05-23 15:32] ✅ Acceso a la página principal
+[2025-05-23 15:33] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 15:34] 🏬 Conexión a Supabase exitosa.
+[2025-05-23 15:34] ✅ Última versión: v1.4.1
+[2025-05-23 16:59] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 16:59] 1. Nho89 - 23 contribuciones
+[2025-05-23 16:59] 2. marie-adi - 18 contribuciones
+[2025-05-23 16:59] ✅ Acceso a la página principal
+[2025-05-23 17:01] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:01] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:01] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:01] ✅ Acceso a la página principal
+[2025-05-23 17:01] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:01] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:01] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:01] ✅ Acceso a la página principal
+[2025-05-23 17:02] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:02] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:02] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:02] ✅ Acceso a la página principal
+[2025-05-23 17:03] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:03] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:03] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:03] ✅ Acceso a la página principal
+[2025-05-23 17:04] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:04] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:04] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:04] ✅ Acceso a la página principal
+[2025-05-23 17:08] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:08] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:08] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:08] ✅ Acceso a la página principal
+[2025-05-23 17:08] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:08] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:08] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:08] ✅ Acceso a la página principal
+[2025-05-23 17:09] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:09] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:09] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:09] ✅ Acceso a la página principal
+[2025-05-23 17:11] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:11] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:11] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:11] ✅ Acceso a la página principal
+[2025-05-23 17:12] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:12] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:12] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:12] ✅ Acceso a la página principal
+[2025-05-23 17:13] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:13] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:13] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:13] ✅ Acceso a la página principal
+[2025-05-23 17:23] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:23] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:23] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:23] ✅ Acceso a la página principal
+[2025-05-23 17:23] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:23] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:23] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:23] ✅ Acceso a la página principal
+[2025-05-23 17:23] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:23] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:23] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:23] ✅ Acceso a la página principal
+[2025-05-23 17:23] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:23] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:23] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:23] ✅ Acceso a la página principal
+[2025-05-23 17:24] ⚠️ No hay datos de genero o edad.
+[2025-05-23 17:24] ✅ Recibido datos {'age': 57.0, 'gender': 'M', 'height_cm': 180.0, 'weight_kg': 94.0, 'body_fat_percent': 29.012345679012345, 'diastolic': 81.0, 'systolic': 124.0, 'gripforce': 36.0, 'sit_and_bend_forward_cm': 27.0, 'sit_ups_counts': 77, 'broad_jump_cm': 189.0}
+[2025-05-23 17:24] ✅ Modelo seleccionado: B
+[2025-05-23 17:24] ✅ Prediction: {'prediction': 'D', 'probability': 0.5921662597887137}
+[2025-05-23 17:24] ✅ Los datos se han guardado correctamente
+[2025-05-23 17:25] 🏭 Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6
+[2025-05-23 17:25] 1. Nho89 - 23 contribuciones
+[2025-05-23 17:25] 2. marie-adi - 18 contribuciones
+[2025-05-23 17:25] ✅ Acceso a la página principal

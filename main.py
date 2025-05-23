@@ -29,8 +29,8 @@ inv_class_map = {v: k for k, v in class_map.items()}
 
 # uvicorn main:app --reload
 
-# VERSION=github.get_latest_github_tag()
-VERSION = settings.version
+VERSION=github.get_latest_github_tag()
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     model_a_b.load_data()

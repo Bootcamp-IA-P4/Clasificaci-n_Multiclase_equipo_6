@@ -13,59 +13,27 @@
   <link rel="stylesheet" href="/static/style.css">
   <meta name="description" content="{{ description }}" />
   <title>{{ title }}</title>
-
 </head>
-<style>
-
-</style>
-  <body>
-    <div class="container bg-white rounded shadow p-4"></div>
-    <section class="bg-light text-center py-1 padding">
-      <div class="container">
-        <h1 class="display-4">{{ title }}</h1>
-        <p class="lead">{{ description }}</p>
-      </div>
-      <p class="lead_left">{{ slogan }}</p>
-      <img src="{{ url_for('static', path='img/test.jpg') }}" class="buttom_test_form" title="Do physical test"
-        onclick="window.test_p.showModal();" />
-      <div style="text-align: left;">
-      <img
-          src="{{ url_for('static', path='img/info.png') }}"
-          class="booton"
-          title="Tracer"
-          onclick="window.tracer.showModal();"
-        />
-      <a href="/docs" target="_black">
-        <img
-            src="{{ url_for('static', path='img/api.png') }}"
-            class="booton"
-            title="Api docs"
-          />
-        </a>
-      </div>
-      
-      <dialog id="test_p" class="ali container mt-4">
-        <img
-          src="{{ url_for('static', path='img/boton.png') }}"
-          class="booton"
-          title="Close window"
-          onclick="window.test_p.close();"
-        />  
-        <div class="">
 
 <body>
   <section class="bg-light text-center py-1 padding">
-    <div class="container">
-      <h1 class="display-4">{{ title }}</h1>
-      <p class="lead">{{ description }}</p>
+    <div class="d-flex align-items-center justify-content-between flex-wrap" style="gap: 24px;">
+      <div style="width:740px;">
+        <h1 class="display-4 text-start">{{ title }}</h1>
+        <p class="lead text-start">{{ description }}</p>
+        <p class="lead_left text-start">{{ slogan }}</p>
+      </div>
+      <div>
+        <img src="{{ url_for('static', path='img/test.png') }}" class="buttom_test_form" title="Hacer análisis"
+          onclick="window.test_p.showModal();" />
+      </div>
     </div>
     <div style="text-align: left;">
-      <img src="{{ url_for('static', path='img/test.jpg') }}" class="booton" title="Do physical test"
-        onclick="window.test_p.showModal();" />
-      <img src="{{ url_for('static', path='img/info.png') }}" class="booton" title="Tracer"
+      
+      <img src="{{ url_for('static', path='img/info.png') }}" class="booton" title="Trazabilidad app" 
         onclick="window.tracer.showModal();" />
       <a href="/docs" target="_black">
-        <img src="{{ url_for('static', path='img/api.png') }}" class="booton" title="Api docs" />
+        <img src="{{ url_for('static', path='img/api_2.png') }}" class="booton" title="Documentación API" />
       </a>
     </div>
 
@@ -380,18 +348,18 @@
       <table id="myTable" class="display">
         <thead>
           <tr>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Height</th>
-            <th>Weight</th>
-            <th>BMI</th>
-            <th>Diastolic</th>
-            <th>Systolic</th>
-            <th>Grip Strength</th>
-            <th>Forward Bend</th>
-            <th>Sit-ups</th>
-            <th>Jump</th>
-            <th>Result</th>
+            <th>Edad</th>
+            <th>Género</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>IMC</th>
+            <th>Diastólica</th>
+            <th>Sistólica</th>
+            <th>Fuerza agarre</th>
+            <th>Flexión alante</th>
+            <th>Rep. abdominales</th>
+            <th>Salto</th>
+            <th>Resultado</th>
           </tr>
         </thead>
 

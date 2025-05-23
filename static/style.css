@@ -145,9 +145,39 @@
 #predict{
   text-align: right;
 }
+#tracer {
+      width: 800px !important;
+      text-align: right;
+    }
+
+    #tracer pre {
+      text-align: left;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    #result img {
+      text-align: center;
+    }
+
+    #result pre {
+      font-size: 8em;
+    }
+
+    #radarChart {
+      width: 333px !important;
+      height: 333px !important;
+    }
 .buttom_test_form{
   cursor: pointer;
-  height: 50px;
+  height: 200px;
+  border-radius: 84px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.buttom_test_form:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transform: scale(1.05);
 }
 .lead_left{
   text-align: center;

@@ -11,7 +11,6 @@ class Settings:
         self.clean_data_path = "data/clean_data.csv"
         self.combined_data = "data/combined_data.csv"
         self.test_data_logs = "data/test_data_logs.csv"
-        self.proyect_name = "My body performance"
         self.repository = "https://api.github.com/repos/Bootcamp-IA-P4/Clasificaci-n_Multiclase_equipo_6"
         self.version = "1.0.0"
         self.description = "¿Estás preparándote para una oposición física? ¿Entrenas en un gimnasio o simplemente te interesa conocer tu rendimiento corporal?"
