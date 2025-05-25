@@ -14,6 +14,9 @@
 - [Testing](#-testing)
 - [Render Deployment](#-render-deployment)
 - [Dockerization](#-dockerization).
+- [System Logs](#-system-logs).
+- [Versioned](#-versioned).
+- [A/B Testing](#a/b-esting).
 - [Collaborators](#-collaborators)  
 ---
 
@@ -39,7 +42,7 @@ Although the data originates from Korea, the features used are universal, making
 ---
 
 ## 🐞 Current Issues  
-❌ .
+❌ Enhanced model accuracy necessitates the acquisition of additional data.
 
 ---
 
@@ -91,7 +94,7 @@ Although the data originates from Korea, the features used are universal, making
 
 ## 🧠 Architecture Diagram
 <div align="center">
-  <img src="" alt="Banner centrado" width="900" height="400">
+  <img src="https://res.cloudinary.com/artevivo/image/upload/v1747994952/Captura_de_pantalla_2025-05-23_120752_apbzb3.png" alt="Banner centrado" width="900" height="400">
 </div>
 ---
 
@@ -121,7 +124,7 @@ uvicorn main:app --reload
 ## 📊 Model Performance & Hyperparameters
 
 <div align="center">
-  <img src="https://res.cloudinary.com/artevivo/image/upload/v1747826379/Captura_de_pantalla_2025-05-21_091101_r8ouxt.png" alt="Metrics" width="800" height="250">
+  <img src="https://res.cloudinary.com/artevivo/image/upload/v1748001916/Captura_de_pantalla_2025-05-23_140440_bwr7i4.png" alt="Metrics" width="800" height="350">
 </div>
 ---
 
@@ -149,6 +152,25 @@ docker-compose up --build
 ```
 ---
 
+## 🚩 System LOgs
+The logging system, built with core.lw_log, records every access and prediction made, enabling traceability and auditing of the application's usage.
+
+---
+
+## 📒 Versioned
+The system utilizes automatic versioning based on GitHub tags.
+
+Every time the application is deployed, the displayed version corresponds to the latest tag published in the repository, which facilitates change control..
+
+---
+
+## A/B Testing
+The project implements an automatic A/B testing system for machine learning models.
+Each time new data is generated, a new model (Model B) is trained and its performance is compared to the current production model (Model A) using the macro F1-score on the same validation set.
+If Model B outperforms Model A by at least 10% in F1-score, it automatically replaces the production model.
+The entire process is logged and recorded in a CSV history for traceability and auditing.
+
+---
 ## 🧑‍💻 Collaborators
 This project was developed by the following contributors:
 - [Michael López](https://github.com/mikewig/)  
