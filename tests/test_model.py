@@ -4,7 +4,7 @@ import joblib
 import os
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from model.utils import map_gender
+#from model.utils import map_gender
 
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

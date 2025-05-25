@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+  <meta name="description" content="{{ description }}" />
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  <section class="bg-light text-center py-1 padding">
+    <div class="d-flex align-items-center justify-content-between flex-wrap" style="gap: 24px;">
+      <div style="width:740px;">
+        <h1 class="display-4 text-start">{{ title }}</h1>
+        <p class="lead text-start">{{ description }}</p>
+        <p class="lead_left text-start">{{ slogan }}</p>
+      </div>
+      <div>
+        <img src="{{ url_for('static', path='img/test.png') }}" class="buttom_test_form" title="Hacer análisis"
+          onclick="window.test_p.showModal();" />
+      </div>
+    </div>
+    <div style="text-align: left;">
+      
+      <img src="{{ url_for('static', path='img/info.png') }}" class="booton" title="Trazabilidad app" 
+        onclick="window.tracer.showModal();" />
+      <a href="/docs" target="_black">
+        <img src="{{ url_for('static', path='img/api_2.png') }}" class="booton" title="Documentación API" />
+      </a>
+    </div>
+
+    <dialog id="test_p" class="ali container mt-4">
+      <img src="{{ url_for('static', path='img/boton.png') }}" class="booton" title="Close window"
+        onclick="window.test_p.close();" />
+      <div class="">
+
+        <form id="fitness-form" class="card p-4 shadow-sm">
+          <fieldset>
+            <h2 class="text-center">Primer paso</h2>
+            <div class="mb-3">
+              <label class="form-label">Selecciona el género:</label><br />
+              <div class="center">
+                <img src="static/img/F.png" alt="Femenino" class="gender-option" id="gender-f" data-value="F"
+                  title="Femenino" />
+                <img src="static/img/M.png" alt="Masculino" class="gender-option" id="gender-m" data-value="M"
+                  title="Masculino" />
+              </div>
+
+              <input type="hidden" name="gender" id="gender" required />
+            </div>
+            <input id="init" type="button" class="next btn btn-info" value="Next" disabled />
+          </fieldset>
+          <fieldset>
+            <h2 class="text-center">Segundo paso</h2>
+            <div class="mb-3">
+              <label for="age" class="form-label">Edad <span id="age-value" class="badge bg-secondary">25</span></label>
+              <input type="range" class="form-range" name="age" id="age" min="18" max="80" step="1" value="25"
+                required />
+
+            </div>
+            <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+            <input type="button" class="next btn btn-info" value="Next" />
+          </fieldset>
+          <fieldset>
+            <h2 class="text-center">Tercer paso</h2>
+            <div class="mb-3">
+              <label for="height_cm" class="form-label">Altura (cm) <span id="altura_val"
+                  class="badge bg-secondary">-</span></label>
+              <input type="range" class="form-range" name="height_cm" id="height_cm" min="50" max="230" value="180"
+                step="1" required />
+
+            </div>
+
+            <div class="mb-3">
+              <label for="weight_kg" class="form-label">Peso (kg) <span id="peso_val"
+                  class="badge bg-secondary">-</span></label>
+              <input type="range" class="form-range" name="weight_kg" id="weight_kg" min="40" max="230" value="75"
+                step="1" required />
+
+            </div>
+
+            <input type="hidden" name="body_fat" id="imc_val" />
+            <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+            <input type="button" class="next btn btn-info" value="Next" />
+          </fieldset>
+          <fieldset>
+            <h2 class="text-center">Cuarto paso</h2>
+
+            <div class="mb-3">
+              <label for="diastolic" class="form-label">Presión diastólica (mínima) <span id="rangeValue_dia"
+                  class="badge bg-secondary"></span></label>
+              <div class="contenedor">
+                ?
+                <div class="tooltip">
+                  <div class="card">
+
+                    <h3>📊 Valores de referencia:</h3>
+                    <ul>
+                      <li><strong>Normal:</strong> menos de 80 mmHg</li>
+                      <li><strong>Elevada:</strong> entre 80 y 89 mmHg</li>
+                      <li><strong>Hipertensión etapa 2:</strong> 90 mmHg o más</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <input oninput="updateValue_dia(this.value)" type="range" class="form-range" name="diastolic"
+                id="diastolic" min="40" max="110" value="80" step="1" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="systolic" class="form-label">Presión sistólica (máxima) <span id="rangeValue_sis"
+                  class="badge bg-secondary"></span></label>
+              <div class="contenedor">
+                ?
+                <div class="tooltip">
+                  <div class="card">
+                    <h3>📊 Valores de referencia:</h3>
+                    <ul>
+                      <li><strong>Normal:</strong> menos de 120 mmHg</li>
+                      <li><strong>Elevada:</strong> entre 120 y 129 mmHg</li>
+                      <li><strong>Hipertensión etapa 1:</strong> entre 130 y 139 mmHg</li>
+                      <li><strong>Hipertensión etapa 2:</strong> 140 mmHg o más</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <input oninput="updateValue_sis(this.value)" type="range" class="form-range" name="systolic" id="systolic"
+                min="80" max="170" value="120" step="1" required />
+
+            </div>
+
+            <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+            <input type="button" class="next btn btn-info" value="Next" />
+          </fieldset>
+          <fieldset>
+            <h2 class="text-center">Quinto paso</h2>
+            <div class="mb-3">
+              <label for="gripforce" class="form-label">Fuerza de agarre (kg) <span id="gripValue"
+                  class="badge bg-secondary"></span></label>
+              <div class="contenedor">
+                ?
+                <div class="tooltip">
+                  <div class="card">
+                    <h3>🖐️ ¿Qué es la fuerza de agarre?</h3>
+                    <p><strong>La fuerza de agarre</strong> representa la <strong>fuerza con la que una persona puede
+                        cerrar la mano</strong> al apretar un dinamómetro.</p>
+
+                  </div>
+                </div>
+              </div>
+              <input type="range" class="form-range" name="gripforce" id="gripforce" min="10" max="70" value="40"
+                step="1" required />
+
+            </div>
+
+            <div class="mb-3">
+              <label for="sit_bend_cm" class="form-label">Flexión hacia delante (cm) <span id="sit_bend_cm_Value"
+                  class="badge bg-secondary"></span>
+              </label>
+              <div class="contenedor">
+                ?
+                <div class="tooltip">
+                  <div class="card">
+                    <h3>🧪 ¿Cómo se mide?</h3>
+                    <p>Se usa un test muy común llamado <strong>“Sit and Reach”</strong>:</p>
+                    <ul>
+                      <li>La persona se sienta en el suelo con las piernas estiradas hacia delante.</li>
+                      <li>Se coloca una regla o caja con un medidor justo delante de los pies.</li>
+                      <li>Con los brazos extendidos, debe inclinarse hacia adelante y alcanzar con las manos lo más
+                        lejos posible.</li>
+                      <li>Se anota la distancia alcanzada con los dedos (en cm).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <input oninput="updateValue_sit_bend_cm(this.value)" type="range" class="form-range" name="sit_bend_cm"
+                id="sit_bend_cm" min="0" max="90" value="40" step="1" required />
+            </div>
+            <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+            <input type="button" class="next btn btn-info" value="Next" />
+          </fieldset>
+          <fieldset>
+            <h2 class="text-center">Sexto paso</h2>
+            <div class="mb-3">
+              <label for="situps" class="form-label">Repeticiones abdominales
+                <span id="situps_Value" class="badge bg-secondary"></span>
+              </label>
+              <div class="contenedor">
+                ?
+                <div class="tooltip">
+                  <div class="card">
+                    <h3>🧪 ¿Qué es la prueba de abdominales?</h3>
+                    <p>
+                      La prueba de <strong>abdominales (sit-ups)</strong> evalúa la resistencia muscular del abdomen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <input oninput="updateValue_situps(this.value)" type="range" class="form-range" name="situps" id="situps"
+                min="0" max="160" value="40" step="1" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="broad_jump_cm" class="form-label">Salto largo (cm) <span id="broad_jump_cm_Value"
+                  class="badge bg-secondary"></span>
+              </label>
+              <div class="contenedor">
+                ?
+                <div class="tooltip">
+                  <div class="card">
+                    <h3>🦵 ¿Qué es el salto horizontal (broad jump)?</h3>
+                    <p>
+                      El <strong>salto horizontal</strong> (o broad jump) mide la <strong>potencia explosiva de las
+                        piernas</strong>.
+                      Es una prueba muy utilizada en evaluaciones físicas para deportistas y personas activas.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <input oninput="updateValue_broad_jump_cem(this.value)" type="range" class="form-range"
+                name="broad_jump_cm" id="broad_jump_cm" min="0" max="220" value="40" step="1" required />
+            </div>
+            <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+
+            <button type="submit" class="btn btn-primary w-100">My body performance</button>
+          </fieldset>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog id="tracer">
+      <img src="{{ url_for('static', path='img/boton.png') }}" class="booton" title="Close window"
+        onclick="window.tracer.close();" />
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+        <button id="prev-day" class="btn btn-secondary btn-sm" title="Día anterior">&lt;</button>
+        <span id="current-date" style="font-weight: bold;"></span>
+        <button id="next-day" class="btn btn-secondary btn-sm" title="Día siguiente">&gt;</button>
+      </div>
+      <pre id="logs-content">Cargando logs...</pre>
+      <script>
+        // Utilidad para formatear fecha a YYYY-MM-DD
+        function formatDate(date) {
+          const yyyy = date.getFullYear();
+          const mm = String(date.getMonth() + 1).padStart(2, '0');
+          const dd = String(date.getDate()).padStart(2, '0');
+          return `${yyyy}-${mm}-${dd}`;
+        }
+
+        let tracerCurrentDate = new Date();
+
+        function updateTracerLogs() {
+          const fecha = formatDate(tracerCurrentDate);
+          document.getElementById('current-date').textContent = fecha;
+          fetch(`${apipref}/logs?date=${fecha}`)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('logs-content').innerHTML = data;
+            })
+            .catch(() => {
+              document.getElementById('logs-content').textContent = 'Error al cargar los logs.';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('tracer').addEventListener('show', function () {
+            tracerCurrentDate = new Date(); // reset to today on open
+            updateTracerLogs();
+          });
+
+          document.getElementById('prev-day').addEventListener('click', function () {
+            tracerCurrentDate.setDate(tracerCurrentDate.getDate() - 1);
+            updateTracerLogs();
+          });
+
+          document.getElementById('next-day').addEventListener('click', function () {
+            tracerCurrentDate.setDate(tracerCurrentDate.getDate() + 1);
+            updateTracerLogs();
+          });
+        });
+
+        // Para compatibilidad con showModal()
+        const tracerDialog = document.getElementById('tracer');
+        if (tracerDialog) {
+          const origShowModal = tracerDialog.showModal;
+          tracerDialog.showModal = function () {
+            const event = new Event('show');
+            tracerDialog.dispatchEvent(event);
+            origShowModal.call(tracerDialog);
+          };
+        }
+      </script>
+    </dialog>
+
+    <dialog id="predict">
+      <img src="{{ url_for('static', path='img/boton.png') }}" class="booton" title="Close window"
+        onclick="window.location.reload();" />
+      <h3>Resultado del Análisis</h3>
+      <div style="display: flex; align-items: flex-start; gap: 32px;">
+        <div id="result" style="flex: 1;"></div>
+        <div style="flex: 1;">
+          <canvas id="radarChart"></canvas>
+        </div>
+
+      </div>
+      <script>
+        const ctx = document.getElementById('radarChart').getContext('2d');
+        let radarChart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: [],
+            datasets: [{
+              label: "{{ title }}",
+              data: [],
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              borderColor: 'rgb(75, 192, 192)',
+              pointBackgroundColor: 'rgb(75, 192, 192)',
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: true,
+                position: 'top',
+                align: 'start'
+              }
+            },
+            scales: {
+              r: {
+                suggestedMin: 10,
+                suggestedMax: 80
+              }
+            }
+          }
+        });
+      </script>
+    </dialog>
+    <section class="section">
+      <table id="myTable" class="display">
+        <thead>
+          <tr>
+            <th>Edad</th>
+            <th>Género</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>IMC</th>
+            <th>Diastólica</th>
+            <th>Sistólica</th>
+            <th>Fuerza agarre</th>
+            <th>Flexión alante</th>
+            <th>Rep. abdominales</th>
+            <th>Salto</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+
+        {% for body in body_performance %}
+        <tr>
+          <td>{{ body["age"] }}</td>
+          <td>
+            <img src="static/img/{{ body["gender"] }}.png" class="gender-show" title="{{ body["gender"] }}" />
+          </td>
+          <td>{{ body["height_cm"] }}</td>
+          <td>{{ body["weight_kg"] }}</td>
+          <td>{{ body["body_fat_percent"] }}</td>
+          <td>{{ body["diastolic"] }}</td>
+          <td>{{ body["systolic"] }}</td>
+          <td>{{ body["gripforce"] }}</td>
+          <td>{{ body["sit_and_bend_forward_cm"] }}</td>
+          <td>{{ body["sit_ups_counts"] }}</td>
+          <td>{{ body["broad_jump_cm"] }}</td>
+          <td>{{ body["class"] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </section>
+    <footer class="text-center py-4">
+      <p>&copy; {{ date }} {{title}} {{ creators }}</p>
+    </footer>
+  </section>
+
+  <script>
+    const apipref = "{{ apipref }}";
+    $(document).ready(function () {
+      let form = $('#fitness-form');
+      let fieldsets = form.find('fieldset');
+
+      for (i = 1; i < fieldsets.length; i++) {
+        $(fieldsets[i]).hide();
+      }
+
+      $(".next").click(function () {
+
+        current_step = $(this).parent();
+        next_step = $(this).parent().next();
+        next_step.show();
+        current_step.hide();
+      });
+
+      $(".previous").click(function () {
+        current_step = $(this).parent();
+        prev_step = $(this).parent().prev();
+        prev_step.show();
+        current_step.hide();
+
+      });
+    });
+  </script>
+  <script src="static/model_3d.js"></script>
+
+</body>
+
+</html>

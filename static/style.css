@@ -1,0 +1,197 @@
+    body {
+      background-image: url('img/fondo.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      max-width: 1124px;
+      /* Ancho máximo */
+      margin: 0 auto;
+      /* Centrado horizontal */
+    }
+
+    .gender-option {
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      max-width: 150px;
+      transition: 0.2s;
+    }
+
+    .gender-option.selected {
+      border-color: #ffcc00;
+      box-shadow: 0 0 10px rgba(0, 255, 64, 0.6);
+    }
+
+    .contenedor {
+      position: relative;
+      /* Necesario para posicionar el tooltip dentro */
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      /* Oculta por defecto */
+
+      color: #fff;
+      text-align: center;
+      padding: 8px;
+      border-radius: 6px;
+      position: absolute;
+      bottom: -390%;
+      /* Posiciona arriba del contenedor */
+      right: -285px;
+      transform: translateX(-50%);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s;
+      white-space: nowrap;
+
+      word-wrap: break-word;
+      white-space: normal;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+      font-size: 10px;
+    }
+
+    input[type="range"]:focus {
+      outline: none;
+    }
+
+    input[type="range"]:focus::-webkit-slider-thumb {
+      background-color: red;
+      /* Cambia el color del "pulgar" en WebKit (Chrome, Safari) */
+    }
+
+    input[type="range"]:focus::-moz-range-thumb {
+      background-color: red;
+      /* Cambia el color del "pulgar" en Firefox */
+    }
+
+    .contenedor:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .card {
+      text-align: left;
+      padding: 1rem;
+
+    }
+
+    .booton {
+      cursor: pointer;
+      height: 30px;
+    }
+
+    .ali {
+      text-align: left;
+    }
+
+    table {
+      width: 100%;
+
+    }
+
+    .bg-light {
+      --bs-bg-opacity: 1;
+      background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .padding {
+      padding: 10px !important;
+    }
+
+    dialog {
+      height: 450px !important;
+      width: 550px !important;
+      border-radius: 10px !important;
+      border-color: cornflowerblue;
+    }
+
+    fieldset {
+      height: 330px;
+    }
+
+    #test_p {
+      text-align: right;
+    }
+
+    fieldset .previous {
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      border: 1px solid;
+    }
+
+    fieldset .next {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+  button {
+    display: block;
+    margin-top: 10px;
+  }
+.gender-show{
+  height: 20px;
+}
+#predict{
+  text-align: right;
+}
+#tracer {
+      width: 800px !important;
+      text-align: right;
+    }
+
+    #tracer pre {
+      text-align: left;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    #result img {
+      text-align: center;
+    }
+
+    #result pre {
+      font-size: 8em;
+    }
+
+    #radarChart {
+      width: 333px !important;
+      height: 333px !important;
+    }
+.buttom_test_form{
+  cursor: pointer;
+  height: 200px;
+  border-radius: 84px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.buttom_test_form:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+.lead_left{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2E8B57;
+  font-weight: 80;
+}
+.display-4{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #001f3f;
+  font-weight: 100;
+}
+.lead{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #001f3f;
+  font-weight: 80;
+}

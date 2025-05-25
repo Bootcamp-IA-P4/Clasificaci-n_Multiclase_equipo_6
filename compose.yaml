@@ -1,0 +1,20 @@
+
+services:
+  bd_pf:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    container_name: BODY_PERFORMANCE
+
+
+  test:
+    build: .
+    container_name: BODY_PERFORMANCE_test
+    environment:
+      - PYTHONPATH=/app  # Agregar la ruta del código fuente
+    volumes:
+      - .:/app
+    command: pytest tests
+    
