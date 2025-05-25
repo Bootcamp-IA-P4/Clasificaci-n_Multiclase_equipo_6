@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import FunctionTransformer
+from sklearn.preprocessing import FunctionTransformer, StandardScaler
 from model.utils import map_gender
 from sklearn.model_selection import train_test_split, RandomizedSearchCV, StratifiedKFold
 from model.utils import map_gender
@@ -79,8 +79,10 @@ def model_b():
 
         # gender_mapper = FunctionTransformer(map_gender)
         gender_mapper = FunctionTransformer(map_gender)
+        scaler = StandardScaler()
         preprocessor = Pipeline([
-        ('gender_mapper', gender_mapper)
+        ('gender_mapper', gender_mapper),
+        ('scaler', scaler),
         ])
 
         gb = GradientBoostingClassifier(random_state=42, n_iter_no_change=5, validation_fraction=0.1, tol=1e-4 )

@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split, RandomizedSearchCV, Strati
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import FunctionTransformer
+from sklearn.preprocessing import FunctionTransformer, StandardScaler
 from model.utils import map_gender
 from core.config import settings
 
@@ -26,8 +26,10 @@ XTrain, XTest, yTrain, yTest = train_test_split(X, y, test_size=0.2, random_stat
 
 
 gender_mapper = FunctionTransformer(map_gender)
+scaler = StandardScaler()
 preprocessor = Pipeline([
-    ('gender_mapper',gender_mapper)
+    ('gender_mapper',gender_mapper),
+    ('scaler', scaler),
 ])
 
 gb = GradientBoostingClassifier(random_state=42, n_iter_no_change=5, validation_fraction=0.1, tol=1e-4 )
@@ -117,3 +119,13 @@ elif overfitting_percent < 5:
 else:
     print("⚠️ Atención: posible overfitting, considera ajustar hiperparámetros.")
 
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
+
+
+y_pred = best_gb.predict(XTest)
+cm = confusion_matrix(yTest, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+disp.plot(cmap='Blues')
+plt.title("Matriz de Confusión")
+plt.show()
