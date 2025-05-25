@@ -29,7 +29,7 @@ inv_class_map = {v: k for k, v in class_map.items()}
 
 # uvicorn main:app --reload
 
-VERSION=github.get_latest_github_tag()
+VERSION=github.get_latest_github_tag() or "1.0.0"
 
 
 @asynccontextmanager
