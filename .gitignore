@@ -6,6 +6,7 @@ __pycache__
 .qodo
 logs.*
 *.log
+bodyPerformance.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
