@@ -140,8 +140,9 @@ python -m unittest tests/test_model.py
 ---
 
 ## 📂 Demo
-🔗 ▶️ [Ver video - Demo](https://res.cloudinary.com/artevivo/video/upload/v1748255522/0523_djiovy.mov)
+🔗 ▶️ [Ver Demo](https://youtu.be/jJtmIC2H2bU)
 
+[![Alt text](https://img.youtube.com/vi/jJtmIC2H2bU/0.jpg)](https://www.youtube.com/watch?v=jJtmIC2H2bU)
 ---
 
 ## 🚀 Render Deployment
